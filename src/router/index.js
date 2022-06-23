@@ -5,7 +5,8 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import LoginView from '../views/LoginView.vue'
 import CreateAccount from '../views/CreateAccount.vue'
-import HelpView from '../views/HelpView.vue'
+import WhatsView from '../views/WhatsView.vue'
+import PartnersView from '../views/PartnersView.vue'
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,7 @@ const routes = [
   {
     path: '/como-funciona',
     name: 'Como Funciona',
-    component: HelpView
+    component: WhatsView
   },
   {
     path: '/contato',
@@ -39,6 +40,11 @@ const routes = [
     path: '/sobre',
     name: 'Tela de Sobre',
     component: AboutView
+  },
+  {
+    path: '/parceiros',
+    name: 'Tela de Parceiros',
+    component: PartnersView
   },
   // {
   //   path: '/about',

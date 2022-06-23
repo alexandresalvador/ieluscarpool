@@ -1,7 +1,7 @@
 <template>
   <div class="container pt-3">
     <div class="about">
-      <h1>Quem Somos</h1>
+      <h1>Como Funciona</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
         accusantium odit sit possimus iusto perspiciatis? Debitis magni tempore
