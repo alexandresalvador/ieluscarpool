@@ -84,7 +84,7 @@
     </div>
 
     <div class="container3">
-      <h1>este é o footer</h1>
+      <h1>Footer</h1>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <Navbar />
+    <Navbar v-if="exibir()" />
     <router-view />
   </div>
 </template>
@@ -12,8 +12,22 @@ export default {
   name: 'App',
   components: {
     Navbar,
-  }
-}
+  },
+  methods: {
+    exibir() {
+      if (this.$route.name === 'CriarConta') {
+        return false;
+      } if (this.$route.name === 'Tela de Login') {
+        return false;
+      }if (this.$route.name === 'Home logado') {
+        return false;
+      } return true;
+    },
+  },
+  onMounted() {
+    this.exibir();
+  },
+};
 </script>
 
 <style>

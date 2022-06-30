@@ -7,6 +7,7 @@ import LoginView from '../views/LoginView.vue'
 import CreateAccount from '../views/CreateAccount.vue'
 import WhatsView from '../views/WhatsView.vue'
 import PartnersView from '../views/PartnersView.vue'
+import AccountHome from '../views/AccountHome.vue'
 
 Vue.use(VueRouter)
 
@@ -18,7 +19,7 @@ const routes = [
   },
   {
     path: '/criar-conta',
-    name: 'Criar Conta',
+    name: 'CriarConta',
     component: CreateAccount
   },
   {
@@ -45,6 +46,11 @@ const routes = [
     path: '/parceiros',
     name: 'Tela de Parceiros',
     component: PartnersView
+  },
+  {
+    path: '/account-home',
+    name: 'Home logado',
+    component: AccountHome
   },
   // {
   //   path: '/about',

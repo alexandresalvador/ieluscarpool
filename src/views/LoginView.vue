@@ -51,20 +51,70 @@
                     >VER SENHA</label
                   >
                 </div>
-                <button type="submit" class="btn btn-primary">
-                  ENTRAR
-                </button>
+                <a class="nav-link active" aria-current="page" href="#">
+                  <router-link to="/account-home">Entrar</router-link>
+                </a>
               </form>
             </div>
           </div>
           <label class="form-check-label" for="exampleCheck1"
-            >ESQUECI A SENHA</label>
+            >ESQUECI A SENHA</label
+          >
         </div>
       </div>
     </div>
 
     <div class="container3">
-      <h1>este é o footer</h1>
+      <footer class="text-center text-white" style="background-color: #f1f1f1">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </section>
+        </div>
+        <div
+          class="text-center text-dark p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022 Copyright:
+          <a class="text-dark" href="http://www.ielusc.br">Bom Jesus/IELUSC</a>
+        </div>
+      </footer>
     </div>
   </div>
 </template>
