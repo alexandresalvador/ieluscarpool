@@ -21,6 +21,10 @@ export default {
         return false;
       }if (this.$route.name === 'Home logado') {
         return false;
+      }if (this.$route.name === 'Chat logado') {
+        return false;
+      }if (this.$route.name === 'Caronas logado') {
+        return false;
       } return true;
     },
   },

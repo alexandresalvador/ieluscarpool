@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand">
           <img
             src="../assets/LogoIC.png"
             alt=""
@@ -12,50 +12,48 @@
           />
         </a>
         <li class="nav">
-          <a class="nav-link active" aria-current="page" href="#">
-            <h1>Bem-Vindo Visitante</h1>
+          <a class="nav-link active" aria-current="page">
+            <h1>Olá, Visitante</h1>
           </a>
         </li>
       </div>
     </nav>
-    <div class="col">
-      <h1>CARONAS</h1>
+    <div class="container">
+      <h1>Home - Ielusc Carpool</h1>
+      <h6>Seja bem vindo visitante</h6>
     </div>
-    <div class="col">
-      <h3>Pesquisar Carona</h3>
-      <form>
-        <div class="form-row">
-          <div class="col-7">
-            <input type="text" class="form-control" placeholder="Bairro" />
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Rua" />
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="numero" />
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="col">
-      <h3>Ver Solicitações de Carona</h3>
-            <form>
-        <div class="form-row">
-          <div class="col-7">
-            <input type="text" class="form-control" placeholder="Bairro" />
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Rua" />
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="numero" />
-          </div>
-        </div>
-      </form>
+    <div class="container">
+      <button class="btn btn-outline-success me-2" type="button">
+        <router-link to="/account-carpool">Pesquisar Caronas</router-link>
+      </button>
+      <button class="btn btn-outline-success me-2" type="button">
+        <router-link to="#">Ver meu Perfil</router-link>
+      </button>
+      <button class="btn btn-outline-success me-2" type="button">
+        <router-link to="#">Ver meus Favoritos</router-link>
+      </button>
+      <button class="btn btn-outline-success me-2" type="button">
+        <router-link to="#">Ver últimas caronas</router-link>
+      </button>
+      <button class="btn btn-outline-success me-2" type="button">
+        <router-link to="/account-chat">Ver Chat</router-link>
+      </button>
     </div>
 
-    <div class="container3">
-      <h6>footer</h6>
+    <br />
+    <hr />
+    <br />
+
+    <div class="con3">
+      <footer>
+        <div
+          class="text-center text-dark p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022 Copyright:
+          <a class="text-dark" href="http://www.ielusc.br">Bom Jesus/IELUSC</a>
+        </div>
+      </footer>
     </div>
   </div>
 </template>

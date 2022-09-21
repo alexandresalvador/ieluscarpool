@@ -36,31 +36,52 @@
       </button>
     </div>
 
-    <WhatsView />
+    <hr>
+    <AboutView />
+    <hr>
+    <PartnersView />
+    <hr>
+    <ContactView />
+    
 
-    <div class="container3">
-      <h1>Footer</h1>
-    </div>
+    <div class="con3">
+        <footer
+        >
+          <div
+            class="text-center text-dark p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+            © 2022 Copyright:
+            <a class="text-dark" href="http://www.ielusc.br"
+              >Bom Jesus/IELUSC</a
+            >
+          </div>
+        </footer>
+      </div>
   </div>
 </template>
 
 <script>
 import TelaHome from "@/components/TelaHome.vue";
-import WhatsView from "@/views/WhatsView.vue";
+import AboutView from "@/views/AboutView.vue";
+import PartnersView from "@/views/PartnersView.vue";
+import ContactView from "@/views/ContactView.vue";
 
 export default {
   name: "HomeView",
   components: {
     TelaHome,
-    WhatsView
+    AboutView,
+    PartnersView,
+    ContactView,
   },
 };
 </script>
 
 <style scoped>
 
-.container3 {
-  padding: 90px;
+.con3 {
+  padding: 20px;
 }
 
 #imagem-wrapper {

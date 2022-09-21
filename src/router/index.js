@@ -8,6 +8,8 @@ import CreateAccount from '../views/CreateAccount.vue'
 import WhatsView from '../views/WhatsView.vue'
 import PartnersView from '../views/PartnersView.vue'
 import AccountHome from '../views/AccountHome.vue'
+import AccountCarpool from '../views/AccountCarpool.vue'
+import AccountChat from '../views/AccountChat.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +53,16 @@ const routes = [
     path: '/account-home',
     name: 'Home logado',
     component: AccountHome
+  },
+  {
+    path: '/account-carpool',
+    name: 'Caronas logado',
+    component: AccountCarpool
+  },
+  {
+    path: '/account-chat',
+    name: 'Chat logado',
+    component: AccountChat
   },
   // {
   //   path: '/about',

@@ -3,10 +3,7 @@
     <div class="about">
       <h1>Parceiros</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-        accusantium odit sit possimus iusto perspiciatis? Debitis magni tempore
-        adipisci vitae dignissimos. Autem qui debitis esse cumque tempore
-        provident sed earum.
+        Estes são os parceiros que ajudaram na criação dessa aplicação:
       </p>
     </div>
   </div>
