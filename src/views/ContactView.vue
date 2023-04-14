@@ -23,6 +23,7 @@
           rows="3"
         ></textarea>
       </div>
+      <button>Enviar</button>
     </div>
   </div>
 </template>

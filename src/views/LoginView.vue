@@ -7,15 +7,9 @@
             <a class="navbar-brand">
               <img
                 src="../assets/carpool7.jpg"
-                width="600"
-                height="500"
-                class="
-                  d-inline-block
-                  align-text-top
-                  border
-                  shadow
-                  rounded
-                "
+                width="100%"
+            height="90%"
+            class="d-inline-block align-text-top border border-warning border border-4 shadow p-3 mb-5 bg-white rounded"
               />
             </a>
           </div>
@@ -72,8 +66,7 @@
       </div>
 
       <div class="con3">
-        <footer
-        >
+        <footer>
           <div
             class="text-center text-dark p-3"
             style="background-color: rgba(0, 0, 0, 0.2)"
@@ -97,7 +90,6 @@ export default {
 </script>
 
 <style scoped>
-  
 .con {
   margin-top: 40px;
   margin-bottom: 40px;

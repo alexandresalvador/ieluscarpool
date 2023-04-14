@@ -5,6 +5,7 @@
       <p>
         Estes são os parceiros que ajudaram na criação dessa aplicação:
       </p>
+
     </div>
   </div>
 </template>

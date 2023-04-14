@@ -7,9 +7,9 @@
             <a class="navbar-brand">
               <img
                 src="../assets/carpool6.jpg"
-                width="600"
-                height="500"
-                class="d-inline-block align-text-top border shadow rounded"
+                width="100%"
+            height="90%"
+            class="d-inline-block align-text-top border border-primary border border-4 shadow p-3 mb-5 bg-white rounded"
               />
             </a>
           </div>

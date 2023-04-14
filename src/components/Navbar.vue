@@ -22,7 +22,7 @@
         </li>
         <li class="nav">
           <a class="nav-link active" aria-current="page" href="#">
-            <router-link to="/sobre">Quem Somos</router-link>
+            <router-link to="/sobre">Objetivo</router-link>
           </a>
         </li>
         <li class="nav">
