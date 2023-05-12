@@ -6,10 +6,10 @@
           <div class="col" id="imagem-cadastro">
             <a class="navbar-brand">
               <img
-                src="../assets/carpool6.jpg"
+                src="../assets/cartoonCar.png"
                 width="100%"
             height="90%"
-            class="d-inline-block align-text-top border border-primary border border-4 shadow p-3 mb-5 bg-white rounded"
+            class="d-inline-block align-text-top"
               />
             </a>
           </div>
@@ -17,7 +17,7 @@
             <div class="con2">
               <div class="about">
                 <p class="h6">
-                  PARA LOGAR NO IELUSC CARPOOL USE O SEU E-MAIL DO IELUSC E CRIE
+                  PARA PARTICIPAR DO IELUSC CARPOOL, UTILIZE O SEU E-MAIL DO IELUSC E CRIE
                   UMA SENHA PARA PODER CRIAR A SUA CONTA!
                 </p>
                 <form>
@@ -73,7 +73,9 @@
                   </div>
 
                   <button type="submit" class="btn btn-primary">
-                    Realizar Cadastro
+                    <a class="nav-link active" aria-current="page" href="#">
+                       <router-link to="/criar-perfil">Continuar</router-link>
+                   </a>
                   </button>
                 </form>
               </div>
@@ -86,7 +88,7 @@
         <footer
         >
           <div
-            class="text-center text-dark p-3"
+            class="text-center text-dark p-3 fixed-bottom"
             style="background-color: rgba(0, 0, 0, 0.2)"
           >
             © 2022 Copyright:
@@ -101,9 +103,11 @@
 </template>
 
 <script>
+import CreateProfile from './CreateProfile.vue';
+
 export default {
   name: "CreateAccount",
-  components: {},
+  components: { CreateProfile },
 };
 </script>
 

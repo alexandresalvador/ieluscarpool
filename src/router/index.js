@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import LoginView from '../views/LoginView.vue'
 import CreateAccount from '../views/CreateAccount.vue'
+import CreateProfile from '../views/CreateProfile.vue'
 import WhatsView from '../views/WhatsView.vue'
 import PartnersView from '../views/PartnersView.vue'
 import AccountHome from '../views/AccountHome.vue'
@@ -23,6 +24,11 @@ const routes = [
     path: '/criar-conta',
     name: 'CriarConta',
     component: CreateAccount
+  },
+  {
+    path: '/criar-perfil',
+    name: 'CriarPerfil',
+    component: CreateProfile
   },
   {
     path: '/logar',
@@ -48,6 +54,11 @@ const routes = [
     path: '/parceiros',
     name: 'Tela de Parceiros',
     component: PartnersView
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: () => import('../views/Dashboard.vue')
   },
   {
     path: '/account-home',

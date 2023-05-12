@@ -1,6 +1,6 @@
 <template>
-  <div class="con">
-    <div class="container">
+  <div class="con p-1">
+    <div class="container p-1 ">
       <div class="container pt-3">
         <div class="row">
           <div class="col" id="imagem-cadastro">
@@ -9,7 +9,7 @@
                 src="../assets/carpool7.jpg"
                 width="100%"
             height="90%"
-            class="d-inline-block align-text-top border border-warning border border-4 shadow p-3 mb-5 bg-white rounded"
+            class="d-inline-block align-text-top"
               />
             </a>
           </div>
@@ -68,7 +68,7 @@
       <div class="con3">
         <footer>
           <div
-            class="text-center text-dark p-3"
+            class="text-center text-dark p-3 fixed-bottom"
             style="background-color: rgba(0, 0, 0, 0.2)"
           >
             © 2022 Copyright:

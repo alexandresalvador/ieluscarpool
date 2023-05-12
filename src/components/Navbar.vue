@@ -27,7 +27,7 @@
         </li>
         <li class="nav">
           <a class="nav-link active" aria-current="page" href="#">
-            <router-link to="/parceiros">Parceiros</router-link>
+            <router-link to="/a-faculdade">A Faculdade</router-link>
           </a>
         </li>
         <li class="nav">

@@ -2,30 +2,46 @@
   <div id="app">
     <Navbar v-if="exibir()" />
     <router-view />
+
+    <Sidebar />
+    <div :style="{ 'margin-left': sidebarWidth }">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Sidebar from "@/components/sidebar/Sidebar.vue";
+import sidebarWidth from "@/components/sidebar/state.js";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
+    Sidebar,
+  },
+  setup() {
+    return { sidebarWidth };
   },
   methods: {
     exibir() {
-      if (this.$route.name === 'CriarConta') {
+      if (this.$route.name === "CriarConta") {
         return false;
-      } if (this.$route.name === 'Tela de Login') {
+      }
+      if (this.$route.name === "Tela de Login") {
         return false;
-      }if (this.$route.name === 'Home logado') {
+      }
+      if (this.$route.name === "Home logado") {
         return false;
-      }if (this.$route.name === 'Chat logado') {
+      }
+      if (this.$route.name === "Chat logado") {
         return false;
-      }if (this.$route.name === 'Caronas logado') {
+      }
+      if (this.$route.name === "Caronas logado") {
         return false;
-      } return true;
+      }
+      return true;
     },
   },
   onMounted() {
