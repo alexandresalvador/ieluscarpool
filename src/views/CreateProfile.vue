@@ -21,12 +21,14 @@
                 />
               </div>
             </div>
+            <button class="btn btn-light border border-primary"> Escolher Foto</button>
           </div>
         </div>
       </div>
     </div>
     <div>
-      <div class="row mb-3">
+
+      <div class="row mb-4">
         <h6>Coloque suas informações pessoais:</h6>
         <hr />
         <div class="col-3">
@@ -34,7 +36,7 @@
             <label for="razao"
               ><span class="d-flex justify-content-between">
                 <b>Nome Completo: </b>
-                <small v-if="small01()" class="text-danger">
+                <small v-if="alerta01()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -53,7 +55,7 @@
             <label for="inscricao"
               ><span class="d-flex justify-content-between">
                 <b>Curso: </b>
-                <small v-if="small02()" class="text-danger">
+                <small v-if="alerta02()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -72,7 +74,7 @@
             <label for="cpf"
               ><span class="d-flex justify-content-between">
                 <b>Ano de inicio: </b>
-                <small v-if="small03()" class="text-danger">
+                <small v-if="alerta03()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -91,7 +93,7 @@
             <label for="rg"
               ><span class="d-flex justify-content-between">
                 <b>Ano de término: </b>
-                <small v-if="small04()" class="text-danger">
+                <small v-if="alerta04()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -112,7 +114,7 @@
             <label for="nomefantasia"
               ><span class="d-flex justify-content-between">
                 <b>Data de Nascimento: </b>
-                <small v-if="small05()" class="text-danger">
+                <small v-if="alerta05()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -131,7 +133,7 @@
             <label for="telefone"
               ><span class="d-flex justify-content-between">
                 <b>Tel. Fixo/Celular</b>
-                <small v-if="small07()" class="text-danger">
+                <small v-if="alerta06()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -156,7 +158,7 @@
             <label for="rua"
               ><span class="d-flex justify-content-between">
                 <b>Rua: </b>
-                <small v-if="small09()" class="text-danger">
+                <small v-if="alerta07()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -176,7 +178,7 @@
             <label for="numero"
               ><span class="d-flex justify-content-between">
                 <b>Número: </b>
-                <small v-if="small10()" class="text-danger">
+                <small v-if="alerta08()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -195,7 +197,7 @@
             <label for="complemento"
               ><span class="d-flex justify-content-between">
                 <b>Complemento: </b>
-                <small v-if="small11()" class="text-danger">
+                <small v-if="alerta09()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -214,7 +216,7 @@
             <label for="bairro"
               ><span class="d-flex justify-content-between">
                 <b>Bairro: </b>
-                <small v-if="small12()" class="text-danger">
+                <small v-if="alerta10()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -235,7 +237,7 @@
             <label for="cidade"
               ><span class="d-flex justify-content-between">
                 <b>Cidade: </b>
-                <small v-if="small13()" class="text-danger">
+                <small v-if="alerta11()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -254,7 +256,7 @@
             <label for="estado"
               ><span class="d-flex justify-content-between">
                 <b>Estado: </b>
-                <small v-if="small14()" class="text-danger">
+                <small v-if="alerta12()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -273,7 +275,7 @@
             <label for="email"
               ><span class="d-flex justify-content-between">
                 <b>CEP: </b>
-                <small v-if="small15()" class="text-danger">
+                <small v-if="alerta13()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
@@ -301,7 +303,7 @@
         </div>
         <div>
           <button
-            v-if="disabled2()"
+            v-if="desabilitar()"
             type="button"
             disabled
             class="btn btn-light border border-primary"
@@ -328,7 +330,9 @@
 //   import supabase from '../services/index';
 export default {
   name: "CriarPerfil",
-  components: {},
+  components: {
+
+  },
   data() {
     return {
       estabelecimento: {
@@ -401,7 +405,7 @@ export default {
         console.log("error", error);
       }
     },
-    disabled2() {
+    desabilitar() {
       return (
         this.estabelecimento.razaosocial === "" ||
         this.estabelecimento.inscricao === "" ||
@@ -420,50 +424,44 @@ export default {
         this.estabelecimento.cep === ""
       );
     },
-    small01() {
+    alerta01() {
       return this.estabelecimento.razaosocial === "";
     },
-    small02() {
+    alerta02() {
       return this.estabelecimento.inscricao === "";
     },
-    small03() {
+    alerta03() {
       return this.estabelecimento.cpf === "";
     },
-    small04() {
+    alerta04() {
       return this.estabelecimento.rg === "";
     },
-    small05() {
+    alerta05() {
       return this.estabelecimento.nomefantasia === "";
     },
-    small06() {
+    alerta06() {
       return this.estabelecimento.responsavel === "";
     },
-    small07() {
+    alerta07() {
       return this.estabelecimento.telefone === "";
     },
-    small08() {
+    alerta08() {
       return this.estabelecimento.email === "";
     },
-    small09() {
+    alerta09() {
       return this.estabelecimento.rua === "";
     },
-    small10() {
+    alerta10() {
       return this.estabelecimento.numero === "";
     },
-    small11() {
+    alerta11() {
       return this.estabelecimento.complemento === "";
     },
-    small12() {
+    alerta12() {
       return this.estabelecimento.bairro === "";
     },
-    small13() {
+    alerta13() {
       return this.estabelecimento.cidade === "";
-    },
-    small14() {
-      return this.estabelecimento.estado === "";
-    },
-    small15() {
-      return this.estabelecimento.cep === "";
     },
   },
 };

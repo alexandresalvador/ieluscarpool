@@ -1,4 +1,135 @@
-<script>
+<template>
+    <ul class="nav flex-column position-absolute">
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <button
+          class="navbar-toggler p-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebar"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list text-danger fs-5"></i>
+        </button>
+      </li>
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link :to="`/account-profile/${id()}`" title="Meu perfil">
+          <i class="bi bi-person-fill text-danger fs-5"></i>
+        </router-link>
+      </li>
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link to="/account-carpool" title="Procurar caronas">
+          <i class="bi bi-gift-fill text-danger fs-5"></i>
+        </router-link>
+      </li>
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link to="/account-history" title="Meu Histórico">
+          <i class="bi bi-box2-heart-fill text-danger fs-5"></i>
+        </router-link>
+      </li>
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link to="/account-favourites" title="Meus favoritos">
+          <i class="bi bi-heart-fill text-danger fs-5"></i>
+        </router-link>
+      </li>
+      <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link to="/account-chat" title="Meu Chat">
+          <i class="bi bi-chat-dots-fill text-danger fs-5"></i>
+        </router-link>
+      </li>
+      <ul id="sidebar" class="collapse p-0 position-absolute start-100">
+        <li class="nav-item li-close d-flex justify-content-end">
+          <button
+            type="button"
+            class="btn-close bg-danger"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+          </button>
+        </li>
+        <li class="nav-item li-text d-flex">
+          <router-link :to="`/account-profile/${id()}`" class="text-decoration-none text-danger">
+            Meu perfil
+          </router-link>
+        </li>
+        <li class="nav-item li-text d-flex">
+          <router-link to="/account-carpool" class="text-decoration-none text-danger">
+            Pesquisar caronas
+          </router-link>
+        </li>
+        <li class="nav-item li-text d-flex">
+          <router-link to="/account-history" class="text-decoration-none text-danger">
+            Meu Histórico
+          </router-link>
+        </li>
+        <li class="nav-item li-text d-flex">
+          <router-link to="/account-favourites" class="text-decoration-none text-danger">
+            Meus favoritos
+          </router-link>
+        </li>
+        <li class="nav-item li-text d-flex">
+          <router-link to="/account-chat" class="text-decoration-none text-danger">
+            Meu chat
+          </router-link>
+        </li>
+      </ul>
+    </ul>
+  </template>
+  
+  <script>
+  export default {
+    name: 'SidebarPages',
+    methods: {
+      id() {
+        let value = window.localStorage.getItem('userLogged');
+        value = JSON.parse(value);
+        value = value.id;
+        return value;
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  ul {
+    background: rgba(40, 40, 40, 0.9);
+  }
+  ul {
+    z-index: 1000;
+  }
+  .li-icons {
+    padding: 1rem 0.75rem;
+  }
+  .li-text {
+    padding: 1.19rem 0.75rem;
+  }
+  .li-close {
+    padding: 0.95rem 0.75rem;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  #sidebar {
+    width: 11rem;
+  }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
 import SidebarLink from './sidebarlink.vue'
 import { collapsed, toggleSidebar, sidebarWidth } from "./state"
 
@@ -80,4 +211,4 @@ export default{
     transition: 0.2s linear;
 }
 
-</style>
+</style> -->

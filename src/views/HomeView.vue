@@ -94,18 +94,6 @@
     <hr />
     
     <ContactView />
-
-    <div class="con3">
-      <footer>
-        <div
-          class="text-center text-dark p-3"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          © 2022 Copyright:
-          <a class="text-dark" href="http://www.ielusc.br">Bom Jesus/IELUSC</a>
-        </div>
-      </footer>
-    </div>
   </div>
 </template>
 
@@ -129,9 +117,6 @@ export default {
 </script>
 
 <style scoped>
-.con3 {
-  padding: 20px;
-}
 
 #imagem-wrapper {
   height: 50vh;

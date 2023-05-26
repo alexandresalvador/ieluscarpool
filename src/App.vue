@@ -1,51 +1,45 @@
 <template>
   <div id="app">
-    <Navbar v-if="exibir()" />
-    <router-view />
+    <Navbar v-if="exibirNavbar()" :notLogged="deslogado()" @logout="deslogado()" />
 
-    <Sidebar />
-    <div :style="{ 'margin-left': sidebarWidth }">
-      <router-view />
-    </div>
+    <Sidebar v-if="logado()" />
+
+    <router-view />
+    <Footer /> 
+    
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
 import Sidebar from "@/components/sidebar/Sidebar.vue";
-import sidebarWidth from "@/components/sidebar/state.js";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     Sidebar,
+    Footer,
   },
-  setup() {
-    return { sidebarWidth };
-  },
+
   methods: {
-    exibir() {
-      if (this.$route.name === "CriarConta") {
-        return false;
-      }
-      if (this.$route.name === "Tela de Login") {
-        return false;
-      }
-      if (this.$route.name === "Home logado") {
-        return false;
-      }
-      if (this.$route.name === "Chat logado") {
-        return false;
-      }
-      if (this.$route.name === "Caronas logado") {
-        return false;
-      }
-      return true;
+    exibirNavbar() {
+      if (this.$route.name !== 'criarConta' && this.$route.name !== 'login') {
+        return true;
+      } return false;
+    }, 
+    logado() {
+      return localStorage.getItem('userLogged') !== null && this.$route.name !== 'home';
+    },
+    deslogado() {
+      return localStorage.getItem('userLogged') === null;
     },
   },
   onMounted() {
-    this.exibir();
+    this.exibirNavbar();
+    this.deslogado();
+    this.logado();
   },
 };
 </script>

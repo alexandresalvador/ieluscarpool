@@ -10,6 +10,9 @@ import WhatsView from '../views/WhatsView.vue'
 import PartnersView from '../views/PartnersView.vue'
 import AccountHome from '../views/AccountHome.vue'
 import AccountCarpool from '../views/AccountCarpool.vue'
+import AccountProfile from '../views/AccountProfile.vue'
+import AccountFavourites from '../views/AccountFavourites.vue'
+import AccountHistory from '../views/AccountHistory.vue'
 import AccountChat from '../views/AccountChat.vue'
 
 Vue.use(VueRouter)
@@ -51,15 +54,15 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/parceiros',
-    name: 'Tela de Parceiros',
+    path: '/a-faculdade',
+    name: 'Tela da Faculdade',
     component: PartnersView
   },
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import('../views/Dashboard.vue')
-  },
+  // {
+  //   path: '/dashboard',
+  //   name: 'Dashboard',
+  //   component: () => import('../views/Dashboard.vue')
+  // },
   {
     path: '/account-home',
     name: 'Home logado',
@@ -69,6 +72,21 @@ const routes = [
     path: '/account-carpool',
     name: 'Caronas logado',
     component: AccountCarpool
+  },
+  {
+    path: '/account-profile',
+    name: 'Perfil logado',
+    component: AccountProfile
+  },
+  {
+    path: '/account-favourites',
+    name: 'Favoritos logado',
+    component: AccountFavourites
+  },
+  {
+    path: '/account-history',
+    name: 'Historico logado',
+    component: AccountHistory
   },
   {
     path: '/account-chat',

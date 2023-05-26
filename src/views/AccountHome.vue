@@ -29,42 +29,51 @@
         <router-link to="/account-carpool">Pesquisar Caronas</router-link>
       </button>
       <button class="btn btn-outline-success me-2" type="button">
-        <router-link to="#">Ver meu Perfil</router-link>
+        <router-link to="/account-profile">Ver meu Perfil</router-link>
       </button>
       <button class="btn btn-outline-success me-2" type="button">
-        <router-link to="#">Ver meus Favoritos</router-link>
+        <router-link to="/account-favourites">Ver meus Favoritos</router-link>
       </button>
       <button class="btn btn-outline-success me-2" type="button">
-        <router-link to="#">Ver últimas caronas</router-link>
+        <router-link to="/account-history">Ver últimas caronas</router-link>
       </button>
       <button class="btn btn-outline-success me-2" type="button">
         <router-link to="/account-chat">Ver Chat</router-link>
       </button>
     </div>
     <br />
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="flexRadioDefault"
-        id="flexRadioDefault1"
-      />
-      <label class="form-check-label" for="flexRadioDefault1">
-        Conta Motorista
-      </label>
+    <div class="col d-flex align-items-center">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          Conta Motorista
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Conta caroneiro
+        </label>
+      </div>
     </div>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="radio"
-        name="flexRadioDefault"
-        id="flexRadioDefault2"
-        checked
-      />
-      <label class="form-check-label" for="flexRadioDefault2">
-        Conta caroneiro
-      </label>
+
+    <Sidebar />
+    <div :style="{ 'margin-left': sidebarWidth }">
+      <router-view />
     </div>
+
+
     <hr />
     <div
       id="carouselExampleControls"
@@ -117,8 +126,8 @@
       </button>
     </div>
     <br />
-    <hr>
-    <br>
+    <hr />
+    <br />
     <div class="row">
       <div class="col d-flex justify-content-center" id="img">
         <a class="navbar-brand">
@@ -145,45 +154,33 @@
         </div>
       </div>
     </div>
-    <br>
+    <br />
     <div class="container pt-3">
-    <div class="about">
-      <h1>Fazer Denúncias</h1>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Endereço de e-mail</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Qual a sua denúncia?</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-        ></textarea>
-      </div>
-      <button>Enviar</button>
-    </div>
-  </div>
-
-    <div class="con3">
-      <footer>
-        <div
-          class="text-center text-dark p-3"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          © 2022 Copyright:
-          <a class="text-dark" href="http://www.ielusc.br">Bom Jesus/IELUSC</a>
+      <div class="about">
+        <h1>Fazer Denúncias</h1>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Endereço de e-mail</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
         </div>
-      </footer>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Qual a sua denúncia?</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <button>Enviar</button>
+      </div>
     </div>
   </div>
 </template>
@@ -196,7 +193,8 @@ export default {
 </script>
 
 <style scoped>
-.con3 {
+
+.form-check {
   padding: 20px;
 }
 

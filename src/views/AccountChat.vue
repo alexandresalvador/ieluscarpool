@@ -25,7 +25,6 @@
              <h1 class="text-title">Chat Ielusc Carpool </h1>
         </div>
         <br>
-        <hr>
 
         <div class="row m-0 justify-content-between">
           <div id="chat" class="col-12 bg-light rounded"></div>

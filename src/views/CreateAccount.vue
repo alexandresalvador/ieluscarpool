@@ -83,21 +83,6 @@
           </div>
         </div>
       </div>
-
-      <div class="con3">
-        <footer
-        >
-          <div
-            class="text-center text-dark p-3 fixed-bottom"
-            style="background-color: rgba(0, 0, 0, 0.2)"
-          >
-            © 2022 Copyright:
-            <a class="text-dark" href="http://www.ielusc.br"
-              >Bom Jesus/IELUSC</a
-            >
-          </div>
-        </footer>
-      </div>
     </div>
   </div>
 </template>
@@ -121,10 +106,6 @@ export default {
 .con2 {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-.con3 {
-  padding: 10px;
 }
 
 #imagem-cadastro {
