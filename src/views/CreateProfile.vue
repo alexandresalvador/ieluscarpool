@@ -41,7 +41,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.razaosocial"
+                v-model="perfil.nome"
                 type="text"
                 class="form-control"
                 placeholder="Nome Completo"
@@ -52,7 +52,7 @@
         </div>
         <div class="col-3">
           <div class="row mb-3">
-            <label for="inscricao"
+            <label for="curso"
               ><span class="d-flex justify-content-between">
                 <b>Curso: </b>
                 <small v-if="alerta02()" class="text-danger">
@@ -60,7 +60,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.inscricao"
+                v-model="perfil.curso"
                 type="text"
                 class="form-control"
                 placeholder="curso"
@@ -71,7 +71,7 @@
         </div>
         <div class="col-3">
           <div class="row mb-3">
-            <label for="cpf"
+            <label for="anoinicio"
               ><span class="d-flex justify-content-between">
                 <b>Ano de inicio: </b>
                 <small v-if="alerta03()" class="text-danger">
@@ -79,7 +79,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.cpf"
+                v-model="perfil.anoinicio"
                 type="number"
                 class="form-control"
                 placeholder="Ano de inicio"
@@ -90,7 +90,7 @@
         </div>
         <div class="col-3">
           <div class="row mb-3">
-            <label for="rg"
+            <label for="anotermino"
               ><span class="d-flex justify-content-between">
                 <b>Ano de término: </b>
                 <small v-if="alerta04()" class="text-danger">
@@ -98,7 +98,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.rg"
+                v-model="perfil.anotermino"
                 type="text"
                 class="form-control"
                 placeholder="Ano de termino"
@@ -111,7 +111,7 @@
       <div class="row mb-3">
         <div class="col-3">
           <div class="row mb-3">
-            <label for="nomefantasia"
+            <label for="dtnasc"
               ><span class="d-flex justify-content-between">
                 <b>Data de Nascimento: </b>
                 <small v-if="alerta05()" class="text-danger">
@@ -119,7 +119,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.nomefantasia"
+                v-model="perfil.dtnasc"
                 type="text"
                 class="form-control"
                 placeholder="Data de Nascimento"
@@ -138,7 +138,7 @@
                 >
               </span>
               <input
-                v-model="estabelecimento.telefone"
+                v-model="perfil.telefone"
                 type="number"
                 class="form-control"
                 placeholder="47 99999-9999"
@@ -158,13 +158,13 @@
             <label for="rua"
               ><span class="d-flex justify-content-between">
                 <b>Rua: </b>
-                <small v-if="alerta07()" class="text-danger">
+                <small v-if="alerta06()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                @input="disabled2"
-                v-model="estabelecimento.rua"
+                @input="desabilitar"
+                v-model="perfil.rua"
                 type="text"
                 class="form-control"
                 placeholder="rua"
@@ -178,12 +178,12 @@
             <label for="numero"
               ><span class="d-flex justify-content-between">
                 <b>Número: </b>
-                <small v-if="alerta08()" class="text-danger">
+                <small v-if="alerta07()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.numero"
+                v-model="perfil.numero"
                 type="text"
                 class="form-control"
                 placeholder="numero"
@@ -197,12 +197,12 @@
             <label for="complemento"
               ><span class="d-flex justify-content-between">
                 <b>Complemento: </b>
-                <small v-if="alerta09()" class="text-danger">
+                <small v-if="alerta08()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.complemento"
+                v-model="perfil.complemento"
                 type="text"
                 class="form-control"
                 placeholder="complemento"
@@ -216,12 +216,12 @@
             <label for="bairro"
               ><span class="d-flex justify-content-between">
                 <b>Bairro: </b>
-                <small v-if="alerta10()" class="text-danger">
+                <small v-if="alerta09()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.bairro"
+                v-model="perfil.bairro"
                 type="text"
                 class="form-control"
                 placeholder="bairro"
@@ -237,12 +237,12 @@
             <label for="cidade"
               ><span class="d-flex justify-content-between">
                 <b>Cidade: </b>
-                <small v-if="alerta11()" class="text-danger">
+                <small v-if="alerta10()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.cidade"
+                v-model="perfil.cidade"
                 type="text"
                 class="form-control"
                 placeholder="cidade"
@@ -256,12 +256,12 @@
             <label for="estado"
               ><span class="d-flex justify-content-between">
                 <b>Estado: </b>
-                <small v-if="alerta12()" class="text-danger">
+                <small v-if="alerta11()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.estado"
+                v-model="perfil.estado"
                 type="text"
                 class="form-control"
                 placeholder="estado"
@@ -275,12 +275,12 @@
             <label for="email"
               ><span class="d-flex justify-content-between">
                 <b>CEP: </b>
-                <small v-if="alerta13()" class="text-danger">
+                <small v-if="alerta12()" class="text-danger">
                   Campo obrigatório!</small
                 >
               </span>
               <input
-                v-model="estabelecimento.cep"
+                v-model="perfil.cep"
                 type="number"
                 class="form-control"
                 placeholder="CEP"
@@ -335,15 +335,13 @@ export default {
   },
   data() {
     return {
-      estabelecimento: {
-        razaosocial: "",
-        inscricao: "",
-        cpf: "",
-        rg: "",
-        nomefantasia: "",
-        responsavel: "",
+      perfil: {
+        nome: "",
+        curso: "",
+        anoinicio: "",
+        anotermino: "",
+        dtnasc: "",
         telefone: "",
-        email: "",
         rua: "",
         numero: "",
         complemento: "",
@@ -351,27 +349,18 @@ export default {
         cidade: "",
         estado: "",
         cep: "",
-        linkedin: "",
-        facebook: "",
-        youtube: "",
-        instagram: "",
-        twitter: "",
-        whatsapp: "",
-        tags: "",
       },
     };
   },
   methods: {
-    cadastrarEstabelecimento() {
+    cadastrarperfil() {
       const cadastroEst = {
-        razaosocial: this.razaosocial,
-        inscricao: this.inscricao,
-        cpf: this.cpf,
-        rg: this.rg,
-        nomefantasia: this.nomefantasia,
-        responsavel: this.responsavel,
+        nome: this.nome,
+        curso: this.curso,
+        anoinicio: this.anoinicio,
+        anotermino: this.anotermino,
+        dtnasc: this.dtnasc,
         telefone: this.telefone,
-        email: this.email,
         rua: this.rua,
         numero: this.numero,
         complemento: this.complemento,
@@ -379,20 +368,13 @@ export default {
         cidade: this.cidade,
         estado: this.estado,
         cep: this.cep,
-        linkedin: this.linkedin,
-        facebook: this.facebok,
-        youtube: this.youtube,
-        instagram: this.instagram,
-        twitter: this.twitter,
-        whatsapp: this.whatsapp,
-        tags: this.tags,
       };
       this.salvaCadastro(cadastroEst);
       this.$router.push("/");
     },
     async salvaCadastro(camposCadastro) {
       const { data, error } = await supabase
-        .from("estabelecimento")
+        .from("perfil")
         .insert([camposCadastro]);
       this.success(data);
       this.error(error);
@@ -407,61 +389,56 @@ export default {
     },
     desabilitar() {
       return (
-        this.estabelecimento.razaosocial === "" ||
-        this.estabelecimento.inscricao === "" ||
-        this.estabelecimento.cpf === "" ||
-        this.estabelecimento.rg === "" ||
-        this.estabelecimento.nomefantasia === "" ||
-        this.estabelecimento.responsavel === "" ||
-        this.estabelecimento.telefone === "" ||
-        this.estabelecimento.email === "" ||
-        this.estabelecimento.rua === "" ||
-        this.estabelecimento.numero === "" ||
-        this.estabelecimento.complemento === "" ||
-        this.estabelecimento.bairro === "" ||
-        this.estabelecimento.cidade === "" ||
-        this.estabelecimento.estado === "" ||
-        this.estabelecimento.cep === ""
+        this.perfil.nome === "" ||
+        this.perfil.curso === "" ||
+        this.perfil.anoinicio === "" ||
+        this.perfil.anotermino === "" ||
+        this.perfil.dtnasc === "" ||
+        this.perfil.telefone === "" ||
+        this.perfil.rua === "" ||
+        this.perfil.numero === "" ||
+        this.perfil.complemento === "" ||
+        this.perfil.bairro === "" ||
+        this.perfil.cidade === "" ||
+        this.perfil.estado === "" ||
+        this.perfil.cep === ""
       );
     },
     alerta01() {
-      return this.estabelecimento.razaosocial === "";
+      return this.perfil.nome === "";
     },
     alerta02() {
-      return this.estabelecimento.inscricao === "";
+      return this.perfil.curso === "";
     },
     alerta03() {
-      return this.estabelecimento.cpf === "";
+      return this.perfil.anoinicio === "";
     },
     alerta04() {
-      return this.estabelecimento.rg === "";
+      return this.perfil.anotermino === "";
     },
     alerta05() {
-      return this.estabelecimento.nomefantasia === "";
+      return this.perfil.dtnasc === "";
     },
     alerta06() {
-      return this.estabelecimento.responsavel === "";
+      return this.perfil.telefone === "";
     },
     alerta07() {
-      return this.estabelecimento.telefone === "";
+      return this.perfil.email === "";
     },
     alerta08() {
-      return this.estabelecimento.email === "";
+      return this.perfil.rua === "";
     },
     alerta09() {
-      return this.estabelecimento.rua === "";
+      return this.perfil.numero === "";
     },
     alerta10() {
-      return this.estabelecimento.numero === "";
+      return this.perfil.complemento === "";
     },
     alerta11() {
-      return this.estabelecimento.complemento === "";
+      return this.perfil.bairro === "";
     },
     alerta12() {
-      return this.estabelecimento.bairro === "";
-    },
-    alerta13() {
-      return this.estabelecimento.cidade === "";
+      return this.perfil.cidade === "";
     },
   },
 };
