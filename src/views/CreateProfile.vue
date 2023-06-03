@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid px-5">
     <h5>Ielusc Carpool | Criação de Perfil</h5>
     <hr />
     <div>
@@ -12,13 +12,8 @@
           <div class="row mb-3">
             <div class="col">
               <div class="d-flex justify-content-center align-items-center">
-                <img
-                  src="../assets/foto-perfil.png"
-                  alt=""
-                  width="80"
-                  height="80"
-                  class="d-inline-block align-text-top"
-                />
+                <img src="../assets/foto-perfil.png" alt="" width="80" height="80"
+                  class="d-inline-block align-text-top" />
               </div>
             </div>
             <button class="btn btn-light border border-primary"> Escolher Foto</button>
@@ -27,274 +22,165 @@
       </div>
     </div>
     <div>
-
+      <h6>Coloque suas informações pessoais:</h6>
+      <hr />
       <div class="row mb-4">
-        <h6>Coloque suas informações pessoais:</h6>
-        <hr />
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="razao"
-              ><span class="d-flex justify-content-between">
+            <label for="nome"><span class="d-flex justify-content-between">
                 <b>Nome Completo: </b>
                 <small v-if="alerta01()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.nome"
-                type="text"
-                class="form-control"
-                placeholder="Nome Completo"
-                required
-              />
+              <input v-model="perfil.nome" type="text" class="form-control" placeholder="Nome Completo" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="curso"
-              ><span class="d-flex justify-content-between">
+            <label for="curso"><span class="d-flex justify-content-between">
                 <b>Curso: </b>
                 <small v-if="alerta02()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.curso"
-                type="text"
-                class="form-control"
-                placeholder="curso"
-                required
-              />
+              <input v-model="perfil.curso" type="text" class="form-control" placeholder="Curso" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="anoinicio"
-              ><span class="d-flex justify-content-between">
-                <b>Ano de inicio: </b>
+            <label for="data_inicio"><span class="d-flex justify-content-between">
+                <b>Data de inicio: </b>
                 <small v-if="alerta03()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.anoinicio"
-                type="number"
-                class="form-control"
-                placeholder="Ano de inicio"
-                required
-              />
+              <input v-model="perfil.data_inicio" type="date" class="form-control" placeholder="" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="anotermino"
-              ><span class="d-flex justify-content-between">
-                <b>Ano de término: </b>
+            <label for="data_termino"><span class="d-flex justify-content-between">
+                <b>Data de término: </b>
                 <small v-if="alerta04()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.anotermino"
-                type="text"
-                class="form-control"
-                placeholder="Ano de termino"
-                required
-              />
+              <input v-model="perfil.data_termino" type="date" class="form-control" placeholder="" required />
             </label>
           </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="dtnasc"
-              ><span class="d-flex justify-content-between">
+            <label for="dtnasc"><span class="d-flex justify-content-between">
                 <b>Data de Nascimento: </b>
                 <small v-if="alerta05()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.dtnasc"
-                type="text"
-                class="form-control"
-                placeholder="Data de Nascimento"
-                required
-              />
+              <input v-model="perfil.dtnasc" type="date" class="form-control" placeholder="Data de Nascimento" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="telefone"
-              ><span class="d-flex justify-content-between">
+            <label for="telefone"><span class="d-flex justify-content-between">
                 <b>Tel. Fixo/Celular</b>
                 <small v-if="alerta06()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.telefone"
-                type="number"
-                class="form-control"
-                placeholder="47 99999-9999"
-                required
-              />
+              <input v-model="perfil.telefone" type="text" class="form-control" placeholder="47 99999-9999" required />
             </label>
           </div>
         </div>
       </div>
     </div>
     <div>
-      <div class="row mb-3">
+      <div class="row mb-4">
         <h6>Endereço</h6>
         <hr />
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="rua"
-              ><span class="d-flex justify-content-between">
+            <label for="rua"><span class="d-flex justify-content-between">
                 <b>Rua: </b>
                 <small v-if="alerta06()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                @input="desabilitar"
-                v-model="perfil.rua"
-                type="text"
-                class="form-control"
-                placeholder="rua"
-                required
-              />
+              <input @input="desabilitar" v-model="perfil.rua" type="text" class="form-control" placeholder="Rua"
+                required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-1">
           <div class="row mb-3">
-            <label for="numero"
-              ><span class="d-flex justify-content-between">
+            <label for="numero"><span class="d-flex justify-content-between">
                 <b>Número: </b>
                 <small v-if="alerta07()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.numero"
-                type="text"
-                class="form-control"
-                placeholder="numero"
-                required
-              />
+              <input v-model="perfil.numero" type="text" class="form-control" placeholder="Número" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="complemento"
-              ><span class="d-flex justify-content-between">
+            <label for="complemento"><span class="d-flex justify-content-between">
                 <b>Complemento: </b>
                 <small v-if="alerta08()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.complemento"
-                type="text"
-                class="form-control"
-                placeholder="complemento"
-                required
-              />
+              <input v-model="perfil.complemento" type="text" class="form-control" placeholder="Complemento" required />
             </label>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="row mb-3">
-            <label for="bairro"
-              ><span class="d-flex justify-content-between">
+            <label for="bairro"><span class="d-flex justify-content-between">
                 <b>Bairro: </b>
                 <small v-if="alerta09()" class="text-danger">
-                  Campo obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.bairro"
-                type="text"
-                class="form-control"
-                placeholder="bairro"
-                required
-              />
+              <input v-model="perfil.bairro" type="text" class="form-control" placeholder="Bairro" required />
             </label>
           </div>
         </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-3">
-          <div class="row mb-3">
-            <label for="cidade"
-              ><span class="d-flex justify-content-between">
-                <b>Cidade: </b>
-                <small v-if="alerta10()" class="text-danger">
-                  Campo obrigatório!</small
-                >
-              </span>
-              <input
-                v-model="perfil.cidade"
-                type="text"
-                class="form-control"
-                placeholder="cidade"
-                required
-              />
-            </label>
+        <div class="col">
+            <div class="row mb-3">
+              <label for="cidade"><span class="d-flex justify-content-between">
+                  <b>Cidade: </b>
+                  <small v-if="alerta10()" class="text-danger">
+                    Obrigatório!</small>
+                </span>
+                <input v-model="perfil.cidade" type="text" class="form-control" placeholder="Cidade" required />
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="row mb-3">
-            <label for="estado"
-              ><span class="d-flex justify-content-between">
-                <b>Estado: </b>
-                <small v-if="alerta11()" class="text-danger">
-                  Campo obrigatório!</small
-                >
-              </span>
-              <input
-                v-model="perfil.estado"
-                type="text"
-                class="form-control"
-                placeholder="estado"
-                required
-              />
-            </label>
+          <div class="col-2">
+            <div class="row mb-3">
+              <label for="estado"><span class="d-flex justify-content-between">
+                  <b>Estado: </b>
+                  <small v-if="alerta11()" class="text-danger">
+                    Obrigatório!</small>
+                </span>
+                <input v-model="perfil.estado" type="text" class="form-control" placeholder="Estado" required />
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="row mb-3">
-            <label for="email"
-              ><span class="d-flex justify-content-between">
-                <b>CEP: </b>
-                <small v-if="alerta12()" class="text-danger">
-                  Campo obrigatório!</small
-                >
-              </span>
-              <input
-                v-model="perfil.cep"
-                type="number"
-                class="form-control"
-                placeholder="CEP"
-                required
-              />
-            </label>
+          <div class="col">
+            <div class="row mb-3">
+              <label for="email"><span class="d-flex justify-content-between">
+                  <b>CEP: </b>
+                  <small v-if="alerta12()" class="text-danger">
+                    Obrigatório!</small>
+                </span>
+                <input v-model="perfil.cep" type="text" class="form-control" placeholder="CEP" required />
+              </label>
+            </div>
           </div>
-        </div>
       </div>
     </div>
 
     <div class="row justify-content-evenly">
-      <div class="">
-        <div class="col-5">
+      <div class="container">
+        <div class="col">
           <button id="cancelar" type="button" class="btn btn-secondary">
             <router-link class="text-light text-decoration-none" to="/">
               Cancelar
@@ -302,14 +188,8 @@
           </button>
         </div>
         <div>
-          <button
-            v-if="desabilitar()"
-            type="button"
-            disabled
-            class="btn btn-light border border-primary"
-          >
-            <router-link class="text-primary text-decoration-none" to="/"
-              >Salvar
+          <button v-if="desabilitar()" type="button" disabled class="btn btn-light border border-primary">
+            <router-link class="text-primary text-decoration-none" to="/">Salvar
             </router-link>
           </button>
           <!-- <button
@@ -326,7 +206,7 @@
   </div>
 </template>
   
-  <script>
+<script>
 //   import supabase from '../services/index';
 export default {
   name: "CriarPerfil",
@@ -338,8 +218,8 @@ export default {
       perfil: {
         nome: "",
         curso: "",
-        anoinicio: "",
-        anotermino: "",
+        data_inicio: "",
+        data_termino: "",
         dtnasc: "",
         telefone: "",
         rua: "",
@@ -357,8 +237,8 @@ export default {
       const cadastroEst = {
         nome: this.nome,
         curso: this.curso,
-        anoinicio: this.anoinicio,
-        anotermino: this.anotermino,
+        data_inicio: this.data_inicio,
+        data_termino: this.data_termino,
         dtnasc: this.dtnasc,
         telefone: this.telefone,
         rua: this.rua,
@@ -391,8 +271,8 @@ export default {
       return (
         this.perfil.nome === "" ||
         this.perfil.curso === "" ||
-        this.perfil.anoinicio === "" ||
-        this.perfil.anotermino === "" ||
+        this.perfil.data_inicio === "" ||
+        this.perfil.data_termino === "" ||
         this.perfil.dtnasc === "" ||
         this.perfil.telefone === "" ||
         this.perfil.rua === "" ||
@@ -411,10 +291,10 @@ export default {
       return this.perfil.curso === "";
     },
     alerta03() {
-      return this.perfil.anoinicio === "";
+      return this.perfil.data_inicio === "";
     },
     alerta04() {
-      return this.perfil.anotermino === "";
+      return this.perfil.data_termino === "";
     },
     alerta05() {
       return this.perfil.dtnasc === "";
@@ -445,5 +325,4 @@ export default {
 </script>
   
   
-  <style scoped>
-</style>
+<style scoped></style>
