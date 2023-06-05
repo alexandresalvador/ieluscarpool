@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-3">
+  <div class="container pt-3" id="como-funciona">
     <div class="about">
       <h1>Como Funciona o Aplicativo ?</h1>
       <p>

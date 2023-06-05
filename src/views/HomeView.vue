@@ -1,6 +1,6 @@
 <template>
-  <div class="container-fluid pt-3">
-    <div
+  <div class="con pt-3">
+    <!-- <div
       id="carouselExampleControls"
       class="carousel slide border border-warning"
       data-bs-ride="carousel"
@@ -49,11 +49,34 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Depois</span>
       </button>
-    </div>
+    </div> -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Bem Vindo ao</span>
+            <h1>Ielusc Carpool!</h1>
+            <h3>A mais nova forma de se chegar em
+              segurança até a faculdade Ielusc, onde alunos do mesmo campus podem dar
+              caronas ou pegar caronas com outros alunos, por preços que cabem no seu bolso!</h3>
+            <section class="buttons" id="buttons">
+                <a href="/logar" class="btn">Fazer Login</a>
+                <a href="/criar-conta" class="btn">Fazer Cadastro</a>
+            </section>
+        </div>
+        <div class="home-img">
+            <img src="../assets/img-3.png" alt="">
 
-    <hr />
+        </div>
+    </section>
+
+
+    <!-- <button class="btn btn-outline-success me-2" type="button">
+          <router-link to="/logar">Logar</router-link>
+        </button>
+        <button class="btn btn-sm btn-outline-secondary" type="button">
+          <router-link to="/criar-conta">Criar Conta</router-link>
+        </button> -->
     <br />
-    <div class="row">
+    <!-- <div class="row">
       <div class="col d-flex justify-content-center" id="img">
         <a class="navbar-brand">
           <img
@@ -78,9 +101,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <br />
+
     <WhatsView />
 
     <br />
@@ -118,17 +141,100 @@ export default {
 
 <style scoped>
 
-#imagem-wrapper {
+/* #imagem-wrapper {
   height: 50vh;
   overflow: hidden;
   position: relative; /* Para fazer que a imagem com position-absolute respeite a sua posição consoante este selector, ou evitar que saia do mesmo */
-}
+/* }
 #imagem {
   width: 600px;
-  /* código abaixo centra a imagem ao centro */
+  /* código abaixo centra a imagem ao centro 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+} */
+
+section{
+    padding: 50px 10%;
 }
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #E8CC9F;
+    /* azul : #57C6FF fosco: #fcd8af; laranja: #F28A16; */
+    gap: 1rem;
+}
+
+.home-text{
+    flex: 1 1 17rem;
+}
+
+.home-img{
+    flex: 1 1 17rem;
+}
+
+.home-img img{
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-11px, 0);
+    }
+
+    50%{
+        transform: translate(-0px, -11px);
+    }
+
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+
+.home-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+}
+
+.home-text h1{
+    font-size: 3.2rem;
+    color: #13407C;
+    font-weight: bolder;
+}
+
+.home-text h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.buttons {
+  padding: 10px;
+}
+
+.btn{
+    padding: 7px 36px;
+    border: 2px solid black;
+    border-radius: 40px;
+    color: black;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.btn:hover{
+    color: #fff;
+    background: #13407C;
+}
+
+
+
 </style>

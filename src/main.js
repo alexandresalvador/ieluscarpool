@@ -4,9 +4,11 @@ import App from './App.vue'
 import router from './router'
 //import fontAwesome from 'fontawesome'
  import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';  npm i bootstrap-icons
+ import 'bootstrap/dist/css/bootstrap.min.css';  
 
 // Vue.use(Vuelidate);
+
+
 
 Vue.config.productionTip = false
 
