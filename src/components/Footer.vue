@@ -1,5 +1,5 @@
 <template>
-     <section class="contato" id="contato">
+     <footer class="contato" id="contato">
         <div class="social">
             <a href="https://faculdade.ielusc.br/"><i class='bi bi-house-door-fill'></i></a>
             <a href="https://www.instagram.com/faculdadeielusc/"><i class='bi bi-instagram' ></i></a>
@@ -16,7 +16,7 @@
           © 2023 Copyright:
           <a class="text-dark" href="http://www.ielusc.br">Bom Jesus/IELUSC</a>
         </div>
-    </section>
+      </footer>
 </template>
 <script>
 
