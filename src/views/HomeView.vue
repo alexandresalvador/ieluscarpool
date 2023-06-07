@@ -1,12 +1,14 @@
 <template>
   <div class="container-fluid px-0">
+    <Navbar />
     <div class="home row align-items-center p-5" id="home">
       <div class="home-text col">
         <span class="d-flex justify-content-left fs-4">Bem Vindo ao</span>
         <h1 class="d-flex justify-content-left">Ielusc Carpool!</h1>
         <p class="fs-3">
-          A mais nova forma de se chegar em segurança até a faculdade Ielusc, onde alunos do mesmo campus podem dar
-          caronas ou pegar caronas com outros alunos, por preços que cabem no seu bolso!
+          A mais nova forma de se chegar em segurança até a faculdade Ielusc,
+          onde alunos do mesmo campus podem dar caronas ou pegar caronas com
+          outros alunos, por preços que cabem no seu bolso!
         </p>
         <section class="buttons" id="buttons">
           <a href="/logar" class="btn">Fazer Login</a>
@@ -14,8 +16,9 @@
         </section>
       </div>
       <div class="home-img col">
-        <img src="../assets/img-woman.png" alt="">
+        <img src="../assets/img-woman.png" alt="" />
       </div>
+
       <div class="d-none buttons row" id="buttons">
         <div class="col">
           <a href="/logar" class="btn">Fazer Login</a>
@@ -29,45 +32,48 @@
     </div>
     <br />
 
-    <WhatsView />
+    <WhatsView  id="como-funciona" />
     <br />
 
-    <AboutView />
+    <AboutView  id="sobre" />
     <br />
 
-    <PartnersView />
+    <PartnersView  id="a-faculdade" />
     <br />
 
-    <ContactView />
+    <ContactView  id="o-contato" />
   </div>
 </template>
 
 <script>
-import TelaHome from "@/components/TelaHome.vue";
+// import TelaHome from "@/components/TelaHome.vue";
 import WhatsView from "@/views/WhatsView.vue";
 import AboutView from "@/views/AboutView.vue";
 import PartnersView from "@/views/PartnersView.vue";
 import ContactView from "@/views/ContactView.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
   name: "HomeView",
   components: {
-    TelaHome,
+    // TelaHome,
     WhatsView,
     AboutView,
     PartnersView,
     ContactView,
+    Navbar,
   },
 };
 </script>
 
 <style scoped>
-div {
-  /* padding: 50px 10%; */
-}
+
+/* div {
+   padding: 50px 10%; 
+} */
 
 .home {
-  background: #E8CC9F;
+  background: #ffe7c0;
   /* azul : #57C6FF fosco: #fcd8af; laranja: #F28A16; */
 }
 
@@ -90,29 +96,8 @@ div {
   }
 }
 
-/* .home-text span {
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-}
-
-.home-text h1 {
-  font-size: 3.2rem;
-  color: #13407C;
-  font-weight: bolder;
-}
-
-.home-text h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: black;
-  text-transform: uppercase;
-  margin: 0.5rem 0 1.4rem;
-} */
-
 h1 {
-  color: #13407C;
+  color: #13407c;
 }
 
 p {
@@ -135,6 +120,6 @@ p {
 
 .btn:hover {
   color: #fff;
-  background: #13407C;
+  background: #13407c;
 }
 </style>

@@ -1,68 +1,84 @@
 <template>
-  <div class="con p-1">
-    <div class="container p-1 ">
-      <div class="container pt-3">
-        <div class="row">
-          <div class="col" id="imagem-cadastro">
-            <a class="navbar-brand">
-              <img
-                src="../assets/carpool7.jpg"
-                width="100%"
-            height="90%"
-            class="d-inline-block align-text-top"
-              />
-            </a>
-          </div>
-          <div class="col bg-light">
-            <div class="con2">
-              <div class="about">
-                <p>
-                  PARA CONTINUAR NO IELUSCARPOOL, USE A SUA MATRICULA E SENHA JÁ
-                  CADASTRADOS PARA PODER ACESSAR A SUA CONTA!
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >EMAIL</label
-                    >
+  <div class="container-fluid px-0">
+    <div class="home row align-items-center p-5">
+      <div class="home-img col">
+        <img src="../assets/carpool7.jpg" alt="" />
+      </div>
+      <div class="home-text col">
+        <p class="fs-5">
+          Para continuar no Ielusc Carpool, utilize a sua matrícula e senha já
+          cadastradas, para poder fazer o login no aplicativo.
+        </p>
+        <form>
+          <div class="col py-1 d-flex justify-content-center">
+            <div class="col-12">
+              <div class="row justify-content-center">
+                <label for="email" class="form-label row">
+                  <span class="fs-6">Email</span>
+                  <div class="col-11">
                     <input
                       type="email"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
+                      class="form-control form-control-sm mt-1"
+                      id="email"
+                      placeholder="Xpto@email.com"
+                      required
                     />
+                    <div class="text-danger">
+                      <small>Este email não é válido</small>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
-                      >SENHA</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div class="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label class="form-check-label" for="exampleCheck1"
-                      >VER SENHA</label
-                    >
-                  </div>
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <router-link to="/account-home">Entrar</router-link>
-                  </a>
-                </form>
+                </label>
               </div>
             </div>
-            <label class="form-check-label" for="exampleCheck1"
-              >ESQUECI A SENHA</label
-            >
           </div>
-        </div>
+
+          <div class="col py-1 d-flex justify-content-center">
+            <div class="col-12">
+              <div class="row justify-content-center">
+                <label for="password" class="form-label row">
+                  <span class="fs-6">Senha</span>
+                  <div class="col-11">
+                    <input
+                      :type="inputType"
+                      minlength="8"
+                      maxlength="16"
+                      class="senha form-control form-control-sm mt-1"
+                      id="password"
+                      placeholder="Insira sua senha"
+                      required
+                    />
+                    <div class="text-danger">
+                      <small>Precisa conter entre 8 à 16 caracteres.</small>
+                    </div>
+                  </div>
+                  <div class="col-1 d-flex align-items-start px-0 py-1">
+                    <button type="button" class="btn btn-default p-0"></button>
+                  </div>
+                </label>
+              </div>
+              <section class="buttons" id="buttons">
+                <a href="#" class="btn">Esqueci a senha</a>
+              </section>
+            </div>
+          </div>
+          <div class="col py-1 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
+              <section class="buttons" id="buttons">
+                <router-link to="/account-home" class="btn">Entrar</router-link>
+              </section>
+            </div>
+          </div>
+          <div class="col py-1 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
+              <p>
+                Ainda não criou uma conta?
+                <router-link class="text-decoration-none" to="/criar-conta">
+                  Criar conta
+                </router-link>
+              </p>
+            </div>
+          </div>
+        </form>       
       </div>
     </div>
   </div>
@@ -70,24 +86,40 @@
 
 <script>
 export default {
-  name: "CreateAccount",
+  name: "LoginView",
   components: {},
 };
 </script>
 
 <style scoped>
-.con {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.home-img img {
+  width: 100%;
 }
 
-.con2 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+h1 {
+  color: #13407c;
 }
 
-#imagem-cadastro {
-  align-content: center;
+p {
+  font-weight: 600;
+}
+
+.buttons {
+  padding: 10px;
+}
+
+.btn {
+  padding: 7px 36px;
+  border: 2px solid black;
+  border-radius: 40px;
+  color: black;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #13407c;
 }
 </style>
 

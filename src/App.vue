@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar v-if="exibirNavbar()" />
+    <!-- <Navbar v-if="exibirNavbar()" /> -->
     <!-- :notLogged="deslogado()" @logout="deslogado()"  -->
 
     <Sidebar v-if="logado()" />
