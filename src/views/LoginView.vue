@@ -8,8 +8,8 @@
         <div class="col d-flex justify-content-center py-1">
           <div class="col-8">
             <p class="fs-5">
-              Para continuar no Ielusc Carpool, utilize a sua matrícula e senha já
-              cadastradas, para poder fazer o login no aplicativo.
+              Para continuar no Ielusc Carpool, utilize a sua matrícula e senha
+              já cadastradas, para poder fazer o login no aplicativo.
             </p>
           </div>
         </div>
@@ -26,8 +26,11 @@
                       id="email"
                       placeholder="Xpto@email.com"
                       required
-                       v-model="$v.email.$model"
-                    :class="{ error: $v.email.$error, success: !$v.email.$error }"
+                      v-model="$v.email.$model"
+                      :class="{
+                        error: $v.email.$error,
+                        success: !$v.email.$error,
+                      }"
                     />
                     <div v-if="$v.email.$error" class="text-danger">
                       <small>Este email não é válido</small>
@@ -46,36 +49,50 @@
                   <div class="col">
                     <input
                       :type="inputType"
-                      minlength="8"
+                      minlength="10"
                       maxlength="16"
                       class="senha form-control form-control-sm mt-1"
                       id="password"
                       placeholder="Insira sua senha"
                       required
                       v-model="$v.password.$model"
-                    :class="{ error: $v.password.$error, success: !$v.password.$error }"
+                      :class="{
+                        error: $v.password.$error,
+                        success: !$v.password.$error,
+                      }"
                     />
                     <div v-if="$v.password.$error" class="text-danger">
-                      <small>Precisa conter entre 8 à 16 caracteres.</small>
+                      <small>Precisa conter entre 10 à 16 caracteres.</small>
                     </div>
                   </div>
                   <div class="col-1 d-flex align-items-start px-0 py-1">
-                    <button @click="mostrarSenha" type="button" class="btn btn-default p-0">
-                       <i v-if="isPassword" class="bi bi-eye-fill fs-4"></i>
-                       <i v-else class="bi bi-eye-slash-fill fs-4"></i>
+                    <button
+                      @click="mostrarSenha"
+                      type="button"
+                      class="btn btn-default p-0"
+                    >
+                      <i v-if="isPassword" class="bi bi-eye-fill fs-4"></i>
+                      <i v-else class="bi bi-eye-slash-fill fs-4"></i>
                     </button>
                   </div>
                 </label>
               </div>
               <section class="buttons" id="buttons">
-                <a href="#" class="btn">Esqueci a senha</a>
+                <a href="#" class="btn2 btn">Esqueci a senha</a>
               </section>
             </div>
           </div>
           <div class="col py-1 d-flex justify-content-center">
             <div class="col-12 d-flex justify-content-center">
-              <section  :disabled="$v.$invalid" class="buttons" type="submit" id="buttons">
-                <router-link to="/account-home" class="btn">Entrar</router-link>
+              <section
+                :disabled="$v.$invalid"
+                class="buttons"
+                type="submit"
+                id="buttons"
+              >
+                <router-link to="/account-home" class="btn2 btn"
+                  >Entrar</router-link
+                >
               </section>
             </div>
           </div>
@@ -89,7 +106,7 @@
               </p>
             </div>
           </div>
-        </form>       
+        </form>
       </div>
     </div>
   </div>
@@ -101,17 +118,15 @@ import {
   minLength,
   maxLength,
   email,
-} from 'vuelidate/lib/validators'
+} from "vuelidate/lib/validators";
 export default {
   name: "LoginView",
-  components: {
-
-  },
- data() {
+  components: {},
+  data() {
     return {
-      email: '',
-      password: '',
-      inputType: 'password',
+      email: "",
+      password: "",
+      inputType: "password",
     };
   },
   validations: {
@@ -121,13 +136,13 @@ export default {
     },
     password: {
       required,
-      minLength: minLength(8),
+      minLength: minLength(10),
       maxLength: maxLength(16),
     },
   },
   computed: {
     isPassword() {
-      return this.inputType === 'password';
+      return this.inputType === "password";
     },
   },
   methods: {
@@ -137,7 +152,7 @@ export default {
         password: this.password,
       };
       api
-        .post('/login', data)
+        .post("/login", data)
         .then((response) => {
           const { _id } = response.data;
           if (data.password === response.data.password) {
@@ -145,12 +160,12 @@ export default {
               id: _id,
               username: response.data.username,
             };
-            localStorage.removeItem('userLogged');
-            localStorage.setItem('userLogged', JSON.stringify(userLogged));
-            console.log('User successfully logged');
+            localStorage.removeItem("userLogged");
+            localStorage.setItem("userLogged", JSON.stringify(userLogged));
+            console.log("Usuário logado com sucesso!");
             this.$router.push({ path: `/perfil/${_id}` });
           } else {
-            alert('Senha Incorreta!');
+            alert("A senha está Incorreta!");
           }
         })
         .catch((error) => {
@@ -159,12 +174,12 @@ export default {
     },
     mostrarSenha() {
       if (this.isPassword) {
-        this.inputType = 'text';
+        this.inputType = "text";
       } else {
-        this.inputType = 'password';
+        this.inputType = "password";
       }
     },
-  }, 
+  },
 };
 </script>
 
@@ -173,19 +188,16 @@ export default {
   width: 100%;
 }
 
-h1 {
-  color: #13407c;
-}
-
 p {
-  font-weight: 600;
+  font-weight: 500;
+  padding: 7px;
 }
 
 .buttons {
-  padding: 10px;
+  padding: 7px;
 }
 
-.btn {
+.btn2 {
   padding: 7px 36px;
   border: 2px solid black;
   border-radius: 40px;

@@ -26,7 +26,7 @@
                   </div>
                 </div>
                 <button class="btn btn-light" id="button-foto">
-                  Escolher Foto de Perfil
+                  Colocar Foto de Perfil
                 </button>
               </div>
             </div>
@@ -285,7 +285,7 @@
     <div class="row mb-4">
         <div class="col">
           <button id="cancelar" type="button" class="btn btn-secondary">
-            <router-link class="text-light text-decoration-none" to="/">
+            <router-link class="text-light text-decoration-none" to="/criar-conta">
               Cancelar
             </router-link>
           </button>
