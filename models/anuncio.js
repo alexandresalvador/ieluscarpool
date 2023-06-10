@@ -9,11 +9,11 @@ const AnuncioSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  statusAnuncio: {
+  categoria: {
     type: String,
     required: true,
   },
-  categoria: {
+  statusAnuncio: {
     type: String,
     required: true,
   },

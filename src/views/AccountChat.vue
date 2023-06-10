@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <nav class="navbar bg-light">
       <div class="container-fluid">
@@ -76,7 +76,7 @@
 
 
 
- <!-- <script src="/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script>
        
@@ -119,8 +119,5 @@
             Mensagem : <b> ${data.mensagem}</b> 
             </p>`;
             chatScreen.append(col);
-        }); -->
-</script> 
-
-<style scoped>
-</style>
+        }); 
+</script> -->

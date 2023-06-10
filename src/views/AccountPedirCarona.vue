@@ -1,0 +1,51 @@
+<template>
+    <div>
+        <NavbarLog />
+      <div class="con">
+        <h4>Peça uma carona a outro usuario criando uma solicitação:</h4>
+        <br>
+        <hr>
+        <br>
+        <div class="container">
+          <div class="col">
+            <h3>Pedir Carona</h3>
+            <form>
+              <div class="form-row d-inline-block
+                    align-text-top">
+                <div class="col-25">
+                  <input type="text" class="form-control" placeholder="Bairro" />
+                </div>
+                <div class="col-20">
+                  <input type="text" class="form-control" placeholder="Rua" />
+                </div>
+                <div class="col-20">
+                  <input type="text" class="form-control" placeholder="Horário de embarque" />
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary">Pesquisar</button>
+              </div>
+            </form>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </template>
+    
+<script>
+import NavbarLog from "../components/NavbarLogado.vue";
+  export default {
+    name: "AccountPedirCarona",
+    components: {
+    NavbarLog
+  },
+  };
+  </script>
+    
+  <style scoped>
+  .con {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  </style>
+    

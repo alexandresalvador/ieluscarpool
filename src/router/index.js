@@ -9,11 +9,13 @@ import CreateProfile from '../views/CreateProfile.vue'
 import WhatsView from '../views/WhatsView.vue'
 import PartnersView from '../views/PartnersView.vue'
 import AccountHome from '../views/AccountHome.vue'
-import AccountCarpool from '../views/AccountCarpool.vue'
+import AccountOferecerCarona from '../views/AccountOferecerCarona.vue'
+import AccountPedirCarona from '../views/AccountPedirCarona.vue'
 import AccountProfile from '../views/AccountProfile.vue'
 import AccountFavourites from '../views/AccountFavourites.vue'
 import AccountHistory from '../views/AccountHistory.vue'
-import AccountChat from '../views/AccountChat.vue'
+import Denuncia from '../views/Denuncia.vue'
+// import AccountChat from '../views/AccountChat.vue'
 
 Vue.use(VueRouter)
 
@@ -58,20 +60,20 @@ const routes = [
     name: 'Tela da Faculdade',
     component: PartnersView
   },
-  // {
-  //   path: '/dashboard',
-  //   name: 'Dashboard',
-  //   component: () => import('../views/Dashboard.vue')
-  // },
   {
     path: '/account-home',
     name: 'Home logado',
     component: AccountHome
   },
   {
-    path: '/account-carpool',
-    name: 'Caronas logado',
-    component: AccountCarpool
+    path: '/account-motorista',
+    name: 'Oferecer Caronas logado',
+    component: AccountOferecerCarona
+  },
+  {
+    path: '/account-caroneiro',
+    name: 'Pedir Caronas logado',
+    component: AccountPedirCarona
   },
   {
     path: '/account-profile',
@@ -89,10 +91,15 @@ const routes = [
     component: AccountHistory
   },
   {
-    path: '/account-chat',
-    name: 'Chat logado',
-    component: AccountChat
-  },
+    path: '/account-denuncia',
+    name: 'Denuncia',
+    component: Denuncia
+  },  
+  // {
+  //   path: '/account-chat',
+  //   name: 'Chat logado',
+  //   component: AccountChat
+  // },
   // {
   //   path: '/about',
   //   name: 'about',

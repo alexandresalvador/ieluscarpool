@@ -315,7 +315,6 @@
 </template>
   
 <script>
-//   import supabase from '../services/index';
 export default {
   name: "CriarPerfil",
   components: {},

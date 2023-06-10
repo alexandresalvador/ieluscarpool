@@ -1,14 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
-
-const port = process.env.port || 8080;
-
-
 const requireDir = require("require-dir");
 const mongoose = require("mongoose");
 
+const port = process.env.port || 8080;
 
 app.use( express.urlencoded(
     { extended: false }

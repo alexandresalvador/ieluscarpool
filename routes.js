@@ -10,7 +10,6 @@ const CaronaController = require('./controllers/CaronaController');
 // Rota de Login
 routes.post('/login', UsuarioController.login);
 
-
 // Rotas de usuario:
 routes.get('/usuarios', UsuarioController.index);
 routes.post('/usuario', UsuarioController.save);
