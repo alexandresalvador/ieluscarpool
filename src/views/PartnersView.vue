@@ -2,10 +2,10 @@
   <div>
     <div class="container-fluid px-0">
       <div class="partials row align-items-center p-5">
-        <div class="partials-img col">
+        <div class="partials-img col-md-6 mb-3">
           <img src="../assets/bonja2.jpg" alt="" />
         </div>
-        <div class="partials-text col">
+        <div class="partials-text col-md-6">
           <h1 class="d-flex justify-content-left fs-3">Sobre a nossa Faculdade</h1>
           <p class="fs-5">
             A missão da Faculdade Ielusc é educar pessoas em um ambiente
@@ -21,6 +21,9 @@
             participação em projetos de extensão que ampliam as visões de mundo
             e contribuem para a qualidade de vida de diferentes grupos sociais.
           </p>
+        </div>
+        <div class="d-none partials-img col-md-6 mb-3">
+          <img src="../assets/bonja2.jpg" alt="" />
         </div>
       </div>
     </div>

@@ -39,25 +39,11 @@ export default {
 </script>
 
 <style scoped>
-/* header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-  ;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
-  padding: 10px 10%;
-  transition: 0.2s;
-} */
 
 .logo {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo img {
@@ -65,11 +51,9 @@ export default {
 }
 
 .nav-bar {
-  display: flex;
-  list-style: none;
-  /* margin-top: -30px;
-  margin-left: 50%;
-  padding: 2px; */
+  display: none;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .nav-bar a {
@@ -84,10 +68,50 @@ export default {
   color: orange;
 }
 
+.nav-bar li {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.nav-bar li a {
+  display: block;
+}
+
 #menu-icon {
-  font-size: 24px;
   cursor: pointer;
   z-index: 1001;
   display: none;
+  font-size: 1.5rem;
 }
+
+/* arrumar toggle */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-bar {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .nav-bar li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-bar li a {
+    display: block;
+  }
+
+}
+
 </style>

@@ -2,20 +2,26 @@
 <div>
   <div class="container-fluid px-0">
   <div class="partials row align-items-center p-5">
-      <div class="partials-img col">
+      <div class="partials-img col-md-6 mb-4">
         <img src="../assets/img-2.png" alt="" />
       </div>
-      <div class="partials-text col">
+      <div class="partials-text col-md-6">
         <h1 class="d-flex justify-content-left fs-3">Como Funciona o Aplicativo ?</h1>
         <p class="fs-6">
         Ielusc Carpool é a melhor opção para que você não chegue atrasado á faculdade:
       </p>
         <p class="fs-5">
-          Primeiro, é necessário que se crie uma conta, ou apenas fazer um login, caso você ja faça parte do aplicativo, para criar é muito simples: <br>
-          Utilize seu email do Ielusc, crie uma senha segura e clique em continuar. <br>
-          Logo após a confirmação de que a sua conta foi criada, coloque algumas informaçoes pessoais e monte o seu perfil. <br>
+          Primeiro, é necessário que se crie uma conta ou apenas faça login, caso você já faça parte do aplicativo. Para criar, é muito simples:
+          <br />
+          Utilize seu e-mail do Ielusc, crie uma senha segura e clique em continuar.
+          <br />
+          Logo após a confirmação de que a sua conta foi criada, insira algumas informações pessoais e monte o seu perfil.
+          <br />
           Pronto, simples e prático!
         </p>
+      </div>
+      <div class="d-none partials-img col-md-6">
+        <img src="../assets/img-2.png" alt="" />
       </div>
     </div>
   </div>

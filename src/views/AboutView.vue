@@ -2,7 +2,7 @@
   <div>
     <div class="container-fluid px-0">
       <div class="partials row align-items-center p-5">
-        <div class="partials-text col">
+        <div class="partials-text col-md-6 mb-3">
           <h1 class="d-flex justify-content-left fs-3">
             Objetivo do Aplicativo
           </h1>
@@ -17,7 +17,7 @@
             Ielusc do Centro e o do Saguaçu.
           </p>
         </div>
-        <div class="partials-img col">
+        <div class="partials-img col-md-6">
           <img src="../assets/img-3.png" alt="" />
         </div>
       </div>

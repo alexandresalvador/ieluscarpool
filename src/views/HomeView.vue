@@ -2,7 +2,7 @@
   <div class="container-fluid px-0">
     <Navbar />
     <div class="home row align-items-center p-5" id="home">
-      <div class="home-text col">
+      <div class="home-text col">    
         <span class="d-flex justify-content-left fs-4">Bem Vindo ao</span>
         <h1 class="d-flex justify-content-left">Ielusc Carpool!</h1>
         <p class="fs-3">
@@ -21,12 +21,12 @@
 
       <div class="d-none buttons row" id="buttons">
         <div class="col">
-          <a href="/logar" class="btn">Fazer Login</a>
+          <a href="/logar" class="btn-lg">Fazer Login</a>
         </div>
       </div>
       <div class="d-none buttons row" id="buttons">
         <div class="col">
-          <a href="/criar-conta" class="btn">Fazer Cadastro</a>
+          <a href="/criar-conta" class="btn-lg">Fazer Cadastro</a>
         </div>
       </div>
     </div>
@@ -117,4 +117,42 @@ p {
   color: #fff;
   background: #13407c;
 }
+.home-text {
+  text-align: center;
+}
+
+.home-img {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para telas maiores (aqui definido para 768px) */
+@media (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .home-img {
+    margin-top: 40px;
+  }
+
+  .buttons {
+    margin-top: 40px;
+  }
+}
+
 </style>
