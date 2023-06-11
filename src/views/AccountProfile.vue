@@ -115,7 +115,7 @@
               </div>
               <div class="col">
                 <div class="row mb-3">
-                  <label for="dtnasc"
+                  <label for="data_nasc"
                     ><span class="d-flex justify-content-between">
                       <b>Data de Nascimento: </b>
                       <small v-if="alerta05()" class="text-danger">
@@ -123,7 +123,7 @@
                       >
                     </span>
                     <input
-                      v-model="perfil.dtnasc"
+                      v-model="perfil.data_nasc"
                       type="date"
                       class="form-control"
                       placeholder="Data de Nascimento"
@@ -337,7 +337,7 @@ export default {
         curso: "",
         data_inicio: "",
         data_termino: "",
-        dtnasc: "",
+        data_nasc: "",
         telefone: "",
         rua: "",
         numero: "",
@@ -356,7 +356,7 @@ export default {
         curso: this.curso,
         data_inicio: this.data_inicio,
         data_termino: this.data_termino,
-        dtnasc: this.dtnasc,
+        data_nasc: this.data_nasc,
         telefone: this.telefone,
         rua: this.rua,
         numero: this.numero,
@@ -390,7 +390,7 @@ export default {
         this.perfil.curso === "" ||
         this.perfil.data_inicio === "" ||
         this.perfil.data_termino === "" ||
-        this.perfil.dtnasc === "" ||
+        this.perfil.data_nasc === "" ||
         this.perfil.telefone === "" ||
         this.perfil.rua === "" ||
         this.perfil.bairro === "" ||
@@ -412,7 +412,7 @@ export default {
       return this.perfil.data_termino === "";
     },
     alerta05() {
-      return this.perfil.dtnasc === "";
+      return this.perfil.data_nasc === "";
     },
     alerta06() {
       return this.perfil.telefone === "";
@@ -437,12 +437,10 @@ export default {
 </script>
   
 <style scoped>
-
 #foto-perfil {
-  
-  background-color: #14417D; 
+  background-color: #14417d;
   border-radius: 10px;
- }
+}
 .con {
   margin-top: 30px;
   margin-bottom: 30px;

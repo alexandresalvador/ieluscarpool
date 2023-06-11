@@ -1,89 +1,106 @@
 <template>
-  <div class="container-fluid px-0">
+  <div class="container-fluid px-0 p-1">
     <div class="home row align-items-center p-5">
       <div class="home-img col">
         <img src="../assets/carpool7.jpg" alt="" />
       </div>
       <div class="home-text col">
-        <div class="col d-flex justify-content-center py-1">
-          <div class="col-10 col-md-8">
-            <p class="fs-6 text-justify">
-              Utilize a sua matrícula e senha já cadastradas, <br>
-              para poder fazer o login no aplicativo.
-            </p>
-          </div>
-        </div>
         <form>
-          <div class="col d-flex justify-content-center py-1">            
-              <div class="col-10 col-md-6">
-                <label for="email" class="form-label">
-                  <span class="fs-6">Email</span>
-                  <input
-                    type="email"
-                    class="form-control form-control-sm mt-1 mb-3"
-                    id="email"
-                    placeholder="Xpto@email.com"
-                    required
-                    v-model="$v.email.$model"
-                    :class="{
-                      error: $v.email.$error,
-                      success: !$v.email.$error,
-                    }"
-                  />
+          <div class="col d-flex justify-content-center ">
+            <div class="col-6">
+              <label for="email" class="form-label">
+                <div class="d-flex justify-content-center ">
+                  <span class="fs-6">Email: </span>
                   <div v-if="$v.email.$error" class="text-danger">
-                    <small>Este email não é válido</small>
+                    <small class="p-2">Este email não é válido</small>
                   </div>
-                </label>
-              </div>           
+                </div>
+                <input
+                  type="email"
+                  class="form-control form-control mt-1 mb-3"
+                  id="email"
+                  placeholder="xxxxxxxx@ielusc.br"
+                  required
+                  v-model="$v.email.$model"
+                  :class="{
+                    error: $v.email.$error,
+                    success: !$v.email.$error,
+                  }"
+                />
+              </label>
+            </div>
           </div>
 
-          <div class="col py-1 d-flex justify-content-center">
-            <div class="col-10 col-md-6">          
-                <label for="password" class="form-label">
-                  <span class="fs-6">Senha</span>
-                  <div class="input-group">
-                <input :type="inputType" minlength="10" maxlength="16"
-                  class="senha form-control form-control-sm mt-1" id="password" placeholder="Insira sua senha" required
-                  v-model="$v.password.$model" :class="{ error: $v.password.$error, success: !$v.password.$error }" />
-                <button @click="mostrarSenha" type="button" class="btn btn-default p-0 mb-3">
+          <div class="col d-flex justify-content-center ">
+            <div class="col-6">
+              <label for="password" class="form-label">
+                <div class="d-flex justify-content-center ml-1 ">
+                  <span class="fs-6">Senha: </span>
+                  <div v-if="$v.password.$error" class="text-danger">
+                    <small class="p-2">Esta senha não é válida.</small>
+                  </div>
+                </div>
+                <input
+                  :type="inputType"
+                  minlength="10"
+                  maxlength="16"
+                  class="senha form-control form-control mt-1 mb-3"
+                  id="password"
+                  placeholder="Insira sua senha"
+                  required
+                  v-model="$v.password.$model"
+                  :class="{
+                    error: $v.password.$error,
+                    success: !$v.password.$error,
+                  }"
+                />
+                <button
+                  @click="mostrarSenha"
+                  type="button"
+                  class="btn btn-default d-flex "
+                >
                   <i v-if="isPassword" class="bi bi-eye-fill fs-4"></i>
                   <i v-else class="bi bi-eye-slash-fill fs-4"></i>
                 </button>
-              </div>
-              <div v-if="$v.password.$error" class="text-danger">
-                <small>Precisa conter entre 10 à 16 caracteres.</small>
-              </div>
-            </label>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col py-1 d-flex justify-content-center">
-          <div class="col-10 col-md-6 d-flex justify-content-center">
-            <router-link class="text-decoration-none" to="">
-              <b> Esqueci a senha </b>
-            </router-link>
+
+          <div class="col d-flex justify-content-center">
+            <div class="col-10 col-md-6 d-flex justify-content-center">
+              <router-link class="text-decoration-none" to="">
+                 Esqueci a senha 
+              </router-link>
+            </div>
           </div>
-        </div>
-        <div class="col py-1 d-flex justify-content-center">
-          <div class="col-10 col-md-6 d-flex justify-content-center">
-            <section :disabled="$v.$invalid" class="buttons" type="submit" id="buttons">
-              <router-link to="/account-home" class="btn2 btn">Entrar</router-link>
-            </section>
+          <div class="col py-1 d-flex justify-content-center">
+            <div class="col-10 col-md-6 d-flex justify-content-center">
+              <section
+                :disabled="$v.$invalid"
+                class="buttons"
+                type="submit"
+                id="buttons"
+              >
+                <router-link to="/account-home" class="btn2 btn"
+                  >Entrar</router-link
+                >
+              </section>
+            </div>
           </div>
-        </div>
-        <div class="col py-1 d-flex justify-content-center">
-        <div class="col-10 col-md-6 d-flex justify-content-center">
-          <p>
-            Ainda não criou uma conta?
-            <router-link class="text-decoration-none" to="/criar-conta">
-              Criar conta
-            </router-link>
-          </p>
-        </div>
-       </div>
-     </form>
+          <div class="col d-flex justify-content-center">
+            <div class="col-10 col-md-6 d-flex justify-content-center">
+              <p>
+                Ainda não criou uma conta?
+                <router-link class="text-decoration-none" to="/criar-conta">
+                  Criar conta
+                </router-link>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
- </div>
 </template>
 
 <script>
@@ -212,7 +229,6 @@ p {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .home {
-    flex-direction: column;
     align-items: center;
     text-align: center;
   }
@@ -234,7 +250,6 @@ p {
     width: 100%;
   }
 }
-
 </style>
 
 

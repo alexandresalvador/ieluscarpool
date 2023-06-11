@@ -1,43 +1,11 @@
 <template>
-  <div class="container-fluid px-0">
+  <div class="container-fluid px-0 p-1">
     <div class="home row align-items-center p-5">
       <div class="home-img col">
         <img src="../assets/cartoonCar.png" alt="" />
       </div>
       <div class="home-text col">
-        <div class="col d-flex justify-content-center py-1">
-          <div class="col-8">
-            <p class="fs-6">
-              Para participar do Ielusc Carpool, utilize a sua matrícula da Faculdade Ielusc e crie uma senha , logo após configure o seu perfil.
-            </p>
-          </div>
-        </div>
         <form>
-      <!-- <div class="col py-1 d-flex justify-content-center">
-        <div class="col-6">
-          <div class="row justify-content-center">
-            <label for="username" class="form-label row">
-              <span class="fs-6">Nome de usuário: </span>
-              <div class="col">
-                <input
-                  type="text"
-                  class="form-control form-control-sm mt-1"
-                  id="username"
-                  placeholder="Insira um username"
-                  required
-                  minlength="5"
-                  v-model="$v.username.$model"
-                  :class="{ error: $v.username.$error, success: !$v.username.$error }"
-                />
-                <div v-if="$v.username.$error" class="text-danger">
-                  <small>Deve conter ao menos 5 caracteres</small>
-                </div>
-              </div>
-            </label>
-          </div>
-        </div>
-      </div> -->
-
           <div class="col d-flex justify-content-center py-1">
             <div class="col-6">
               <div class="row justify-content-center">
@@ -98,7 +66,7 @@
         <div class="col-6">
           <div class="row justify-content-center">
             <label for="confirmarsenha" class="form-label row">
-              <span class="fs-6">Confimar senha</span>
+              <span class="fs-6">Confimar senha: </span>
               <div class="col">
                 <input
                   type="password"
@@ -275,6 +243,46 @@ p {
 .error {
   border: 1px solid red;
 }
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .home-text {
+    text-align: center;
+  }
+
+  .home-img {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .home-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .form-label {
+    text-align: center;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+  .buttons .btn2 {
+    width: 100%;
+  }
+}
+
+
 </style>
 
 

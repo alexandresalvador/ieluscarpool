@@ -33,7 +33,7 @@ module.exports = {
 
 
     // caroneiro e motorista
-    async CaronasFeitas(req, res) {
+    async CaronasOfertadas(req, res) {
         const anuncio = await Anuncio.find({
           type: 'motorista',
           status: 'active',
@@ -49,7 +49,7 @@ module.exports = {
         return res.json(anuncio);
       },
 
-      async MinhasCaronasFeitas(req, res) {
+      async MinhasCaronasOfertadas(req, res) {
         const anuncio = await Anuncio.find({
           type: 'motorista',
           user: req.params.id,

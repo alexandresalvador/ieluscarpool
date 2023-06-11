@@ -29,18 +29,18 @@ const UsuarioSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  dtnasc:{
+  data_nasc:{
     type: Date,
     required: true,
   },
-  contato: {
-    telefone: {
-      type: String,
-      required: true,
-      min: 8,
-      max: 9,
-    },
+
+  telefone: {
+    type: String,
+    required: true,
+    min: 8,
+    max: 9,
   },
+
   endereco: {
     rua: {
       type: String,
@@ -79,10 +79,6 @@ const UsuarioSchema = new mongoose.Schema({
       required: false,
       min: 3,
     },
-  },
-  dataCarona: {
-    type: String,
-    default: new Date().toLocaleString(),
   },
 });
 

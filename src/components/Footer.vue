@@ -40,6 +40,8 @@ export default {
 .social a{
     font-size: 27px;
     margin: 0.5rem;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .social a .bi{
@@ -61,6 +63,18 @@ export default {
 
 .links a:hover{
     color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+  .social a {
+    margin-bottom: 10px;
+  }
+
+  .links a{
+    display: block;
+    margin-bottom: 1px;
+    padding: 0rem;
+ }
 }
 
 </style>

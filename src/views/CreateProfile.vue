@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-5">
-    <br>
+    <br />
     <h5>Ielusc Carpool | Criação de Perfil</h5>
     <hr />
 
@@ -26,46 +26,53 @@
                   </div>
                 </div>
                 <button class="btn btn-light" id="button-foto">
-                  Colocar Foto de Perfil
+                  <label for="media-input" class="custom-file-upload">
+                    Carregue uma Foto de Perfil
+                    <input type="file" id="media-input" accept="image/*" />
+                  </label>
                 </button>
               </div>
             </div>
-            <div class="col">
-              <div class="row mb-3">
-                <label for="nome"
-                  ><span class="d-flex justify-content-between">
-                    <b>Nome Completo: </b>
-                    <small v-if="alerta01()" class="text-danger">
-                      Obrigatório!</small
-                    >
-                  </span>
-                  <input
-                    v-model="perfil.nome"
-                    type="text"
-                    class="form-control"
-                    placeholder="Nome Completo"
-                    required
-                  />
-                </label>
+            <div class="row">
+              <div class="col">
+                <div class="row mb-3">
+                  <label for="nome"
+                    ><span class="d-flex justify-content-between">
+                      <b>Nome Completo: </b>
+                      <small v-if="alerta01()" class="text-danger">
+                        Obrigatório!</small
+                      >
+                    </span>
+                    <input
+                      v-model="perfil.nome"
+                      type="text"
+                      class="form-control"
+                      placeholder="Nome Completo"
+                      required
+                    />
+                  </label>
+                </div>
               </div>
             </div>
-            <div class="col">
-              <div class="row mb-3">
-                <label for="curso"
-                  ><span class="d-flex justify-content-between">
-                    <b>Curso: </b>
-                    <small v-if="alerta02()" class="text-danger">
-                      Obrigatório!</small
-                    >
-                  </span>
-                  <input
-                    v-model="perfil.curso"
-                    type="text"
-                    class="form-control"
-                    placeholder="Curso"
-                    required
-                  />
-                </label>
+            <div class="row">
+              <div class="col">
+                <div class="row mb-3">
+                  <label for="curso"
+                    ><span class="d-flex justify-content-between">
+                      <b>Curso: </b>
+                      <small v-if="alerta02()" class="text-danger">
+                        Obrigatório!</small
+                      >
+                    </span>
+                    <input
+                      v-model="perfil.curso"
+                      type="text"
+                      class="form-control"
+                      placeholder="Curso"
+                      required
+                    />
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -110,7 +117,7 @@
             </div>
             <div class="col">
               <div class="row mb-3">
-                <label for="dtnasc"
+                <label for="data_nasc"
                   ><span class="d-flex justify-content-between">
                     <b>Data de Nascimento: </b>
                     <small v-if="alerta05()" class="text-danger">
@@ -118,7 +125,7 @@
                     >
                   </span>
                   <input
-                    v-model="perfil.dtnasc"
+                    v-model="perfil.data_nasc"
                     type="date"
                     class="form-control"
                     placeholder="Data de Nascimento"
@@ -127,23 +134,25 @@
                 </label>
               </div>
             </div>
-            <div class="col">
-              <div class="row mb-3">
-                <label for="telefone"
-                  ><span class="d-flex justify-content-between">
-                    <b>Tel. Fixo/Celular</b>
-                    <small v-if="alerta06()" class="text-danger">
-                      Obrigatório!</small
-                    >
-                  </span>
-                  <input
-                    v-model="perfil.telefone"
-                    type="text"
-                    class="form-control"
-                    placeholder="47 99999-9999"
-                    required
-                  />
-                </label>
+            <div class="row">
+              <div class="col">
+                <div class="row mb-3">
+                  <label for="telefone"
+                    ><span class="d-flex justify-content-between">
+                      <b>Tel. Fixo/Celular</b>
+                      <small v-if="alerta06()" class="text-danger">
+                        Obrigatório!</small
+                      >
+                    </span>
+                    <input
+                      v-model="perfil.telefone"
+                      type="text"
+                      class="form-control"
+                      placeholder="47 99999-9999"
+                      required
+                    />
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -152,8 +161,8 @@
       <div>
         <div class="row mb-4">
           <h6>Endereço</h6>
-          <br>
-          <br>
+          <br />
+          <br />
           <div class="col">
             <div class="row mb-3">
               <label for="rua"
@@ -174,89 +183,34 @@
               </label>
             </div>
           </div>
-          <div class="col-1">
-            <div class="row mb-3">
-              <label for="numero"
-                ><span class="d-flex justify-content-between">
-                  <b>Número: </b>
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Número"
-                />
-              </label>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="row mb-3">
+                <label for="numero"
+                  ><span class="d-flex justify-content-between">
+                    <b>Número: </b>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Número"
+                  />
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="row mb-3">
-              <label for="complemento"
-                ><span class="d-flex justify-content-between">
-                  <b>Complemento: </b>
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Complemento"
-                />
-              </label>
-            </div>
-          </div>
-          <div class="col">
-            <div class="row mb-3">
-              <label for="bairro"
-                ><span class="d-flex justify-content-between">
-                  <b>Bairro: </b>
-                  <small v-if="alerta08()" class="text-danger">
-                    Obrigatório!</small
-                  >
-                </span>
-                <input
-                  v-model="perfil.bairro"
-                  type="text"
-                  class="form-control"
-                  placeholder="Bairro"
-                  required
-                />
-              </label>
-            </div>
-          </div>
-          <div class="col">
-            <div class="row mb-3">
-              <label for="cidade"
-                ><span class="d-flex justify-content-between">
-                  <b>Cidade: </b>
-                  <small v-if="alerta09()" class="text-danger">
-                    Obrigatório!</small
-                  >
-                </span>
-                <input
-                  v-model="perfil.cidade"
-                  type="text"
-                  class="form-control"
-                  placeholder="Cidade"
-                  required
-                />
-              </label>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="row mb-3">
-              <label for="estado"
-                ><span class="d-flex justify-content-between">
-                  <b>Estado: </b>
-                  <small v-if="alerta10()" class="text-danger">
-                    Obrigatório!</small
-                  >
-                </span>
-                <input
-                  v-model="perfil.estado"
-                  type="text"
-                  class="form-control"
-                  placeholder="Estado"
-                  required
-                />
-              </label>
+            <div class="col">
+              <div class="row mb-3">
+                <label for="complemento"
+                  ><span class="d-flex justify-content-between">
+                    <b>Complemento: </b>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Complemento"
+                  />
+                </label>
+              </div>
             </div>
           </div>
           <div class="col">
@@ -278,38 +232,101 @@
               </label>
             </div>
           </div>
+          <div class="row mb-4"></div>
+          <div class="col">
+            <div class="row mb-3">
+              <label for="bairro"
+                ><span class="d-flex justify-content-between">
+                  <b>Bairro: </b>
+                  <small v-if="alerta08()" class="text-danger">
+                    Obrigatório!</small
+                  >
+                </span>
+                <input
+                  v-model="perfil.bairro"
+                  type="text"
+                  class="form-control"
+                  placeholder="Bairro"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row mb-3">
+              <label for="estado"
+                ><span class="d-flex justify-content-between">
+                  <b>Estado: </b>
+                  <small v-if="alerta10()" class="text-danger">
+                    Obrigatório!</small
+                  >
+                </span>
+                <input
+                  v-model="perfil.estado"
+                  type="text"
+                  class="form-control"
+                  placeholder="Estado"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row mb-3">
+            <label for="cidade"
+              ><span class="d-flex justify-content-between">
+                <b>Cidade: </b>
+                <small v-if="alerta09()" class="text-danger">
+                  Obrigatório!</small
+                >
+              </span>
+              <input
+                v-model="perfil.cidade"
+                type="text"
+                class="form-control"
+                placeholder="Cidade"
+                required
+              />
+            </label>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="row mb-4">
-        <div class="col">
-          <button id="cancelar" type="button" class="btn btn-secondary">
-            <router-link class="text-light text-decoration-none" to="/criar-conta">
-              Cancelar
-            </router-link>
-          </button>
-        </div>
-        <div class="col">
-          <button
-            v-if="desabilitar()"
-            type="button"
-            disabled
-            class="btn btn-light border border-primary"
+      <div class="col">
+        <button id="cancelar" type="button" class="btn btn-secondary">
+          <router-link
+            class="text-light text-decoration-none"
+            to="/criar-conta"
           >
-            <router-link class="text-primary text-decoration-none" to="/"
-              >Salvar
-            </router-link>
-          </button>
-          <button
-            v-else
-            @click="cadastrar()"
-            type="button"
-            class="btn btn-primary border border-secondary text-light"
-          >
-            Salvar
-          </button>
-        </div>
+            Cancelar
+          </router-link>
+        </button>
+      </div>
+      <div class="col">
+        <button
+          v-if="desabilitar()"
+          type="button"
+          disabled
+          class="btn btn-light border border-primary"
+        >
+          <router-link class="text-primary text-decoration-none" to="/"
+            >Salvar
+          </router-link>
+        </button>
+        <button
+          v-else
+          @click="cadastrar()"
+          type="button"
+          class="btn btn-primary border border-secondary text-light"
+        >
+        <router-link class="text-white text-decoration-none" to="/account-home"
+            >Salvar
+          </router-link>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -325,7 +342,7 @@ export default {
         curso: "",
         data_inicio: "",
         data_termino: "",
-        dtnasc: "",
+        data_nasc: "",
         telefone: "",
         rua: "",
         numero: "",
@@ -344,7 +361,7 @@ export default {
         curso: this.curso,
         data_inicio: this.data_inicio,
         data_termino: this.data_termino,
-        dtnasc: this.dtnasc,
+        data_nasc: this.data_nasc,
         telefone: this.telefone,
         rua: this.rua,
         numero: this.numero,
@@ -378,7 +395,7 @@ export default {
         this.perfil.curso === "" ||
         this.perfil.data_inicio === "" ||
         this.perfil.data_termino === "" ||
-        this.perfil.dtnasc === "" ||
+        this.perfil.data_nasc === "" ||
         this.perfil.telefone === "" ||
         this.perfil.rua === "" ||
         this.perfil.bairro === "" ||
@@ -400,7 +417,7 @@ export default {
       return this.perfil.data_termino === "";
     },
     alerta05() {
-      return this.perfil.dtnasc === "";
+      return this.perfil.data_nasc === "";
     },
     alerta06() {
       return this.perfil.telefone === "";
@@ -426,12 +443,8 @@ export default {
   
   
 <style scoped>
-
 #foto-perfil {
-  
- background-color: rgb(255, 115, 0); 
- border-radius: 10px;
+  background-color: rgb(255, 115, 0);
+  border-radius: 10px;
 }
-
-
 </style>
