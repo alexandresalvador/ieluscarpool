@@ -6,7 +6,7 @@
           <img src="../assets/bonja2.jpg" alt="" />
         </div>
         <div class="partials-text col">
-          <h1 class="d-flex justify-content-left fs-3">Sobre a Faculdade</h1>
+          <h1 class="d-flex justify-content-left fs-3">Sobre a nossa Faculdade</h1>
           <p class="fs-5">
             A missão da Faculdade Ielusc é educar pessoas em um ambiente
             acolhedor por meio de linguagens diversas para que se desenvolvam

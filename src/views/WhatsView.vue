@@ -8,11 +8,11 @@
       <div class="partials-text col">
         <h1 class="d-flex justify-content-left fs-3">Como Funciona o Aplicativo ?</h1>
         <p class="fs-6">
-        Ielusc Carpool é a melhor opção para que voce nao chegue atrasado á faculdade:
+        Ielusc Carpool é a melhor opção para que você não chegue atrasado á faculdade:
       </p>
         <p class="fs-5">
-          Primeiro, é necessário que se crie uma conta, ou apena logar, caso você ja faça parte do aplicativo, para criar é muito simples: <br>
-          Utilize seu email do Ielusc, crie uma senha segura e clique em continuar; <br>
+          Primeiro, é necessário que se crie uma conta, ou apenas fazer um login, caso você ja faça parte do aplicativo, para criar é muito simples: <br>
+          Utilize seu email do Ielusc, crie uma senha segura e clique em continuar. <br>
           Logo após a confirmação de que a sua conta foi criada, coloque algumas informaçoes pessoais e monte o seu perfil. <br>
           Pronto, simples e prático!
         </p>
@@ -35,7 +35,7 @@
   }
 
   50% {
-    transform: translate(-0px, -11px);
+    transform: translate(-0px, 11px);
   }
 
   100% {

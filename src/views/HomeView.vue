@@ -67,22 +67,17 @@ export default {
 </script>
 
 <style scoped>
-
-/* div {
-   padding: 50px 10%; 
-} */
-
 .home {
   background: #ffe7c0;
   /* azul : #57C6FF fosco: #fcd8af; laranja: #F28A16; */
 }
 
 .home-img img {
-  animation: animate 5s linear infinite;
+  /* animation: animate 5s linear infinite; */
   width: 50%;
 }
 
-@keyframes animate {
+/* @keyframes animate {
   0% {
     transform: translate(-11px, 0);
   }
@@ -94,7 +89,7 @@ export default {
   100% {
     transform: translate(-11px, 0);
   }
-}
+} */
 
 h1 {
   color: #13407c;

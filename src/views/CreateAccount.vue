@@ -13,7 +13,7 @@
           </div>
         </div>
         <form>
-          <div class="col py-1 d-flex justify-content-center">
+      <!-- <div class="col py-1 d-flex justify-content-center">
         <div class="col-6">
           <div class="row justify-content-center">
             <label for="username" class="form-label row">
@@ -36,7 +36,7 @@
             </label>
           </div>
         </div>
-      </div>
+      </div> -->
 
           <div class="col d-flex justify-content-center py-1">
             <div class="col-6">
@@ -167,7 +167,7 @@ export default {
   components: { CreateProfile },
   data() {
     return {
-      username: '',
+      // username: '',
       email: '',
       password: '',
       password_confirm: '',
@@ -175,10 +175,10 @@ export default {
     };
   },
   validations: {
-    username: {
-      required,
-      minLength: minLength(5),
-    },
+    // username: {
+    //   required,
+    //   minLength: minLength(5),
+    // },
     email: {
       required,
       email,

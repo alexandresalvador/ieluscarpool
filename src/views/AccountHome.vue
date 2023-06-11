@@ -2,13 +2,23 @@
   <div>
     <NavbarLog />
 
+    <Sidebar />
+    <!-- <div :style="{ 'margin-left': sidebarWidth }">
+      <router-view />
+    </div> -->
     <div class="col d-flex justify-content-center py-2">
       <h6>Seja bem vindo, {visitante}, Chegue tranquilo(a) na faculdade!</h6>
     </div>
-    <Sidebar />
-    <div :style="{ 'margin-left': sidebarWidth }">
-      <router-view />
+    <div class="row">
+      <h5>Você está aqui:</h5>
+      <div class="col d-flex justify-content-center py-20">
+        <div class="col-9">
+          <Geolocalizacao />
+        </div>
+      </div>
     </div>
+    <hr>
+    <br>
     <div class="carousel-inner">
       <div class="carousel-item active" id="imagem-wrapper">
         <img
@@ -31,14 +41,7 @@
       </div>
     </div>
     <br />
-    <div class="row">
-      <h5>Você está aqui:</h5>
-      <div class="col d-flex justify-content-center py-20">
-        <div class="col-12">
-          <Geolocalizacao />
-        </div>
-      </div>
-    </div>
+
     <br />
   </div>
 </template>

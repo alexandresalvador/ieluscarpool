@@ -7,14 +7,14 @@
             Objetivo do Aplicativo
           </h1>
           <p class="fs-6">
-            Ielusc Carpool tem a proposta de solucionar o problema da falta de vagas no estacionamento da faculdade.
+            Ielusc Carpool tem a proposta de solucionar o problema da falta de vagas de estacionamento da faculdade.
           </p>
           <p class="fs-5">
-            O objetivo do Ielusc Carpool é ajudar um aluno ou funcionário a
+            O objetivo do Ielusc Carpool é ajudar um aluno ou um funcionário a
             conseguir encontrar uma carona solidária, de casa até o Campus da
             Faculdade Ielusc, ou vice-versa. <br />
             Este projeto por enquanto abrange apenas o Campus da Faculdade
-            Ielusc do Centro e do Saguaçu.
+            Ielusc do Centro e o do Saguaçu.
           </p>
         </div>
         <div class="partials-img col">

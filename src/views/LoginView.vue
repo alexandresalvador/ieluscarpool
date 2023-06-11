@@ -77,9 +77,14 @@
                   </div>
                 </label>
               </div>
-              <section class="buttons" id="buttons">
-                <a href="#" class="btn2 btn">Esqueci a senha</a>
-              </section>
+              <br>
+              <div class="col py-1 d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-center">
+                  <router-link class="text-decoration-none" to="">
+                    <b> Esqueci a senha </b>
+                  </router-link>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col py-1 d-flex justify-content-center">
