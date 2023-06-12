@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <!-- <Navbar v-if="exibirNavbar()" /> -->
-    <!-- :notLogged="deslogado()" @logout="deslogado()"  -->
+    <NavbarLogado v-if="exibirNavbarLogado()" :naoEstaLogado="naoEstaLogado()" @sair="naoEstaLogado()"  /> 
 
-    <Sidebar v-if="logado()" />
+    <Sidebar v-if="exibirSidebar()" :naoEstaLogado="naoEstaLogado()" @sair="naoEstaLogado()" />
 
     <router-view />
     <Footer /> 
@@ -12,34 +11,40 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+import NavbarLogado from "@/components/NavbarLogado.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    Navbar,
+    NavbarLogado,
     Sidebar,
     Footer,
   },
 
   methods: {
-    exibirNavbar() {
-      if (this.$route.name !== 'criarConta' && this.$route.name !== 'login') {
-        return true;
-      } return false;
-    }, 
-    logado() {
-      return localStorage.getItem('userLogged') !== null && this.$route.name !== 'home';
-    },
-    deslogado() {
-      return localStorage.getItem('userLogged') === null;
-    },
+
+      exibirNavbarLogado() {
+        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView') {
+          return true;
+        } return false;
+      }, 
+      exibirSidebar() {
+        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView') {
+          return true;
+        } return false;
+      }, 
+      // logado() {
+      //   return localStorage.getItem('usuario-logado') !== null && this.$route.nome !== 'home';
+      // },
+      naoEstaLogado() {
+        return localStorage.getItem('usuario-logado') === null;
+      },
   },
   onMounted() {
-    this.exibirNavbar();
-    this.deslogado();
+    this.exibirNavbarLogado();
+    this.naoEstaLogado();
     this.logado();
   },
 };

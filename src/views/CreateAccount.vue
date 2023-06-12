@@ -2,12 +2,12 @@
   <div class="container-fluid px-0 p-1">
     <div class="home row align-items-center p-5">
       <div class="home-img col">
-        <img src="../assets/cartoonCar.png" alt="" />
+        <img src="../assets/carpoolregister.jpg" alt="" />
       </div>
       <div class="home-text col">
         <form>
           <div class="col d-flex justify-content-center py-1">
-            <div class="col-6">
+            <div class="col-10">
               <div class="row justify-content-center">
                 <label for="email" class="form-label row">
                   <span class="fs-6">Insira o seu Email da Faculdade: </span>
@@ -31,7 +31,7 @@
           </div>
 
           <div class="col py-1 d-flex justify-content-center">
-            <div class="col-6">
+            <div class="col-10">
               <div class="row justify-content-center">
                 <label for="password" class="form-label row">
                   <span class="fs-6">Insira uma senha: </span>
@@ -63,10 +63,10 @@
           </div>
 
           <div class="col py-1 d-flex justify-content-center">
-        <div class="col-6">
+        <div class="col-10">
           <div class="row justify-content-center">
             <label for="confirmarsenha" class="form-label row">
-              <span class="fs-6">Confimar senha: </span>
+              <span class="fs-6">Repita a senha: </span>
               <div class="col">
                 <input
                   type="password"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavbarLog />
+    <!-- <NavbarLog /> -->
     
     <div class="con">
       <h4>HISTÓRICO DE CORRIDAS</h4>

@@ -12,6 +12,7 @@ import AccountHome from '../views/AccountHome.vue'
 import AccountOferecerCarona from '../views/AccountOferecerCarona.vue'
 import AccountPedirCarona from '../views/AccountPedirCarona.vue'
 import AccountProfile from '../views/AccountProfile.vue'
+import AccountEditProfile from '../views/AccountEditProfile.vue'
 import AccountFavourites from '../views/AccountFavourites.vue'
 import AccountHistory from '../views/AccountHistory.vue'
 import Denuncia from '../views/Denuncia.vue'
@@ -22,12 +23,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
   },
   {
     path: '/criar-conta',
-    name: 'CriarConta',
+    name: 'CreateAccount',
     component: CreateAccount
   },
   {
@@ -37,7 +38,7 @@ const routes = [
   },
   {
     path: '/logar',
-    name: 'Tela de Login',
+    name: 'LoginView',
     component: LoginView
   },
   {
@@ -79,6 +80,11 @@ const routes = [
     path: '/account-profile',
     name: 'Perfil logado',
     component: AccountProfile
+  },
+  {
+    path: '/account-editar-perfil',
+    name: 'Editar Perfil logado',
+    component: AccountEditProfile
   },
   {
     path: '/account-favourites',

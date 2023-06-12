@@ -1,14 +1,41 @@
 <template>
   <div>
-    <NavbarLog />
-
     <Sidebar />
     <!-- <div :style="{ 'margin-left': sidebarWidth }">
       <router-view />
     </div> -->
-    <div class="col d-flex justify-content-center py-2">
-      <h6>Seja bem vindo, {visitante}, Chegue tranquilo(a) na faculdade!</h6>
+    <div class="col d-flex justify-content-center py-10 p-3">
+      <h6>
+        Seja bem vindo, {visitante}, <br />
+        Chegue tranquilo(a) na faculdade!
+      </h6>
     </div>
+    <div class="col position-relative">
+      <div class="col-6 d-flex justify-content-center py-20">
+        <div class="banner" id="banner">
+          <img
+            src="../assets/banner.png"
+            class="d-block w-100"
+            id="imagem"
+            alt="..."
+          />
+        </div>
+        <div class="button-overlay">
+          <button class="btn btn-primary btn-lg" type="button">
+            <a href="/account-motorista" class="btn text-white"
+              >Oferecer Carona</a
+            >
+          </button>
+          <button class="btn btn-primary btn-lg" type="button">
+            <a href="/account-caroneiro" class="btn text-white"
+              >Buscar Carona</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <br />
     <div class="row">
       <h5>Você está aqui:</h5>
       <div class="col d-flex justify-content-center py-20">
@@ -17,32 +44,7 @@
         </div>
       </div>
     </div>
-    <hr>
-    <br>
-    <div class="carousel-inner">
-      <div class="carousel-item active" id="imagem-wrapper">
-        <img
-          src="../assets/banner.png"
-          class="d-block w-100"
-          id="imagem"
-          alt="..."
-        />
-      </div>
-    </div>
-    <div class="d-grid col-4 mx-auto">
-      <div class="d-flex col p-2">
-        <!-- /account-motorista -->
-      <button class="btn btn-primary btn-lg" type="button">
-        <a href="/account-motorista" class="btn text-white">Oferecer Carona</a>
-      </button>
-      <button class="btn btn-warning btn-lg" type="button">
-        <a href="/account-caroneiro" class="btn text-white">Buscar Carona</a>
-      </button>
-      </div>
-    </div>
-    <br />
-
-    <br />
+    <hr />
   </div>
 </template>
 
@@ -61,21 +63,10 @@ export default {
 </script>
 
 <style scoped>
-.form-check {
-  padding: 20px;
-}
 
-#imagem-wrapper {
-  height: 48vh;
-  overflow: hidden;
-  position: relative; 
-}
 #imagem {
-  width: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: auto;
 }
 
 button {
@@ -86,4 +77,25 @@ button {
   margin: 10px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .col-6,
+  .col-4,
+  .col-9 {
+    width: 100% !important;
+  }
+}
 </style>

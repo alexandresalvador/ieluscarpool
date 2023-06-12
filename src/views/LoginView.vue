@@ -7,7 +7,7 @@
       <div class="home-text col">
         <form>
           <div class="col d-flex justify-content-center ">
-            <div class="col-6">
+            <div class="col-10">
               <label for="email" class="form-label">
                 <div class="d-flex justify-content-center ">
                   <span class="fs-6">Email: </span>
@@ -32,7 +32,7 @@
           </div>
 
           <div class="col d-flex justify-content-center ">
-            <div class="col-6">
+            <div class="col-10">
               <label for="password" class="form-label">
                 <div class="d-flex justify-content-center ml-1 ">
                   <span class="fs-6">Senha: </span>
@@ -45,7 +45,7 @@
                   minlength="10"
                   maxlength="16"
                   class="senha form-control form-control mt-1 mb-3"
-                  id="password"
+                  id="passwordI"
                   placeholder="Insira sua senha"
                   required
                   v-model="$v.password.$model"
@@ -55,9 +55,9 @@
                   }"
                 />
                 <button
-                  @click="mostrarSenha"
+                  @click="mostrarOcultarSenha"
                   type="button"
-                  class="btn btn-default d-flex "
+                  class="btn btn-default p-0 "
                 >
                   <i v-if="isPassword" class="bi bi-eye-fill fs-4"></i>
                   <i v-else class="bi bi-eye-slash-fill fs-4"></i>
@@ -163,11 +163,17 @@ export default {
           console.log(error);
         });
     },
-    mostrarSenha() {
-      if (this.isPassword) {
-        this.inputType = "text";
+    mostrarOcultarSenha: function() {
+      // if (this.isPassword) {
+      //   this.inputType = "text";
+      // } else {
+      //   this.inputType = "password";
+      // }
+      let senha = document.getElementById("passwordI");
+      if (senha.type == "password") {
+        senha.type = "text";
       } else {
-        this.inputType = "password";
+        senha.type = "password";
       }
     },
   },

@@ -4,11 +4,6 @@
       <button
         class="navbar-toggler p-100"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#sidebar"
-        aria-controls="sidebar"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
       >
         <i class="bi bi-list text-white fs-4"></i>
       </button>

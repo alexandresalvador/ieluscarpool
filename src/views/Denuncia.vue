@@ -1,10 +1,8 @@
 <template>
   <div>
-    <NavbarLog />
-
     <div class="container-fluid px-0">
-      <div class="partials row align-items-center p-5">
-        <div class="partials-text col">
+      <div class="partials row col d-flex justify-content-center py-20 p-5">
+        <div class="partials-text col-9">
           <div class="about">
             <h3>O que você quer denunciar?</h3>
             <br />

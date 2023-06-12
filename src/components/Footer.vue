@@ -45,7 +45,7 @@ export default {
 }
 
 .social a .bi{
-  padding: 30px;
+  padding: 10px;
   color: black;
 
 }

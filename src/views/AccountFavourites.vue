@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavbarLog />
+    <!-- <NavbarLog /> -->
     
     <div class="con">
       <h4>CARONAS FAVORITADAS</h4>

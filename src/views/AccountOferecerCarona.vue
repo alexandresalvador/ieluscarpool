@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavbarLog />
+    <!-- <NavbarLog /> -->
     <div class="con">
       <h4>Ofereça uma carona a outro usuario criando uma solicitação:</h4>
       <br>
