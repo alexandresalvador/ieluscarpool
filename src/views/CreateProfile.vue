@@ -333,7 +333,7 @@
   
 <script>
 export default {
-  name: "CriarPerfil",
+  name: "CreateProfile",
   components: {},
   data() {
     return {

@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/criar-perfil',
-    name: 'CriarPerfil',
+    name: 'CreateProfile',
     component: CreateProfile
   },
   {

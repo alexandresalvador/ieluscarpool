@@ -26,12 +26,12 @@ export default {
   methods: {
 
       exibirNavbarLogado() {
-        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView') {
+        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView' && this.$route.name !== 'CreateProfile') {
           return true;
         } return false;
       }, 
       exibirSidebar() {
-        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView') {
+        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView'  && this.$route.name !== 'CreateProfile') {
           return true;
         } return false;
       }, 

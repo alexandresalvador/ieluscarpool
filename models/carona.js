@@ -22,4 +22,4 @@ const CaronaSchema = new mongoose.Schema({
   },
 });
 
-mongoose.model("Carona", CaronaSchema);
+mongoose.model("carona", CaronaSchema);

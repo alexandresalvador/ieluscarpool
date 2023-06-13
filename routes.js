@@ -8,7 +8,7 @@ const AnuncioController = require('./controllers/AnuncioController');
 const CaronaController = require('./controllers/CaronaController');
 
 // Rota de Login
-routes.post('/login', UsuarioController.login);
+routes.post('/logar', UsuarioController.login);
 
 // Rotas de usuario:
 routes.get('/usuarios', UsuarioController.index);

@@ -32,4 +32,4 @@ const AnuncioSchema = new mongoose.Schema({
   },
 });
 
-mongoose.model("Anuncio", AnuncioSchema);
+mongoose.model("anuncio", AnuncioSchema);

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <NavbarLog /> -->
     <div class="con">
       <h4>Ofereça uma carona a outro usuario criando uma solicitação:</h4>
       <br>
@@ -30,11 +29,9 @@
 </template>
   
 <script>
-import NavbarLog from "../components/NavbarLogado.vue";
 export default {
   name: "AccountOferecerCarona",
   components: {
-    NavbarLog
   },
 };
 </script>
