@@ -1,4 +1,4 @@
-const mongoose = require("../database");
+const mongoose = require('../database');
 
 const Carona = mongoose.model("carona");
 
@@ -23,11 +23,13 @@ module.exports = {
 
     async update(req, res) {
         const carona = await Carona.findByIdAndUpdate( req.params.id, req.body, { new: true});
+        console.log('A carona foi atualizada!');
         return res.json(carona);
     },
 
     async destroy(req, res) {
         const carona = await Carona.findByIdAndRemove(req.params.id);
+        console.log(`A carona ${carona.announcement.title} foi removida`);
         return res.json({ message: `A carona ${carona.announcement.title} foi removida`,});
     },
 

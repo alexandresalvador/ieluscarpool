@@ -4,7 +4,7 @@ const cors = require("cors");
 const requireDir = require("require-dir");
 const mongoose = require("mongoose");
 
-const port = process.env.port || 8080;
+const port = process.env.port || 8081;
 
 app.use( express.urlencoded(
     { extended: false }
@@ -21,6 +21,6 @@ const Carona = mongoose.model("carona");
 app.use("/api", require("./routes"));
 
 app.listen(port, () => {
-  console.log(`API RODANDO NA PORTA:  http://localhost:${port}`);
+  console.log(`API RODANDO NA PORTA:  http://localhost:${port}/api`);
 
 });

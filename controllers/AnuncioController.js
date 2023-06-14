@@ -2,6 +2,7 @@ const mongoose = require('../database');
 
 const Anuncio = mongoose.model('anuncio');
 
+
 module.exports = {
 
     async index(req,res) {
@@ -22,13 +23,16 @@ module.exports = {
 
     async update(req,res) {
         const anuncio = await Anuncio.findByIdAndUpdate(req.params.id, req.body, { new: true});
-        return res.json(anuncio)
+        console.log('O anúncio foi atualizado!');
+        return res.json({
+          message: `O anúncio ${anuncio.id} foi atualizado!`,});
     },
 
     async destroy(req, res) {
         const anuncio = await Anuncio.findByIdAndRemove(req.params.id);
+        console.log('O anúncio foi removido!');
         return res.json({
-          message: `O anúncio ${anuncio.title} foi removido!`,});
+          message: `O anúncio ${anuncio.id} foi removido!`,});
     },
 
 
@@ -41,7 +45,7 @@ module.exports = {
         return res.json(anuncio);
       },
 
-      async CaronasRecebidas(req, res) {
+      async CaronasPedidas(req, res) {
         const anuncio = await Anuncio.find({
           type: 'caroneiro',
           status: 'active',
@@ -57,7 +61,7 @@ module.exports = {
         return res.json(anuncio);
       },
 
-      async MinhasCaronasRecebidas(req, res) {
+      async MinhasCaronasPedidas(req, res) {
         const anuncio = await Anuncio.find({
           type: 'caroneiro',
           user: req.params.id,

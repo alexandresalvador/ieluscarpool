@@ -32,11 +32,11 @@ routes.get('/carona/:id', CaronaController.show);
 routes.put('/carona/:id', CaronaController.update);
 
 // Rota de pedido de carona:
-routes.get('/carona-pedido', AnuncioController.showPedidoCaronas);
-routes.get('/meus-pedidos-carona/:id', AnuncioController.showMeusPedidos);
+routes.get('/carona-pedido', AnuncioController.CaronasPedidas);
+routes.get('/meus-pedidos-carona/:id', AnuncioController.MinhasCaronasPedidas);
 
 // Rota de oferta de carona:
-routes.get('/carona-oferta', AnuncioController.showOfertaCaronas);
-routes.get('/minhas-ofertas-carona/:id', AnuncioController.showMinhasOfertas);
+routes.get('/carona-oferta', AnuncioController.CaronasOfertadas);
+routes.get('/minhas-ofertas-carona/:id', AnuncioController.MinhasCaronasOfertadas);
 
 module.exports = routes;
