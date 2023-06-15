@@ -12,7 +12,7 @@ module.exports = {
     },
 
     async index(req, res) {
-        const user = await Usuario.find();
+        Usuario.find().maxTimeMS(30000); 
         return res.json(user);
     },
 

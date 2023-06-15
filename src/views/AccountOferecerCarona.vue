@@ -33,6 +33,11 @@ export default {
   name: "AccountOferecerCarona",
   components: {
   },
+  data() {
+    return {
+      statusAnuncio: "ativo",
+    };
+  },
 };
 </script>
   

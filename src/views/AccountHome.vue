@@ -5,13 +5,13 @@
     </div> -->
     <div class="col d-flex justify-content-center py-10 p-3">
       <h6>
-        <!-- Seja bem vindo, {{ username() }}! <br /> -->
+        Seja bem vindo, {{ username() }}! <br />
         Chegue tranquilo(a) na faculdade!
       </h6>
     </div>
     <div class="col position-relative">
       <div class="col-6 d-flex justify-content-center py-20">
-        <div class="banner" id="banner">
+        <div class="banner container-fluid px-0 py-5" id="banner">
           <img src="../assets/banner.png" class="d-block w-100" id="imagem" alt="..." />
         </div>
         <div class="button-overlay">

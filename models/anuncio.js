@@ -30,16 +30,6 @@ const AnuncioSchema = new mongoose.Schema({
     ref: "usuario",
     required: true,
   },
-  bairro: {
-    type: String,
-    ref: "usuario.endereco.bairro",
-    required: true,
-  },
-  rua: {
-    type: String,
-    ref: "usuario.endereco.rua",
-    required: true,
-  },
 });
 
 mongoose.model("anuncio", AnuncioSchema);
