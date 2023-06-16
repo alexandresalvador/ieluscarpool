@@ -14,9 +14,9 @@ app.use( cors());
 
 requireDir("./models");
 
-const Usuario = mongoose.model("usuario");
-const Anuncio = mongoose.model("anuncio");
-const Carona = mongoose.model("carona");
+const Usuario = mongoose.model("Usuario");
+const Anuncio = mongoose.model("Anuncio");
+const Carona = mongoose.model("Carona");
 
 app.use("/api", require("./routes"));
 

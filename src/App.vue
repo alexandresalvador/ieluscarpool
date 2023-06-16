@@ -36,10 +36,10 @@ export default {
         } return false;
       }, 
       // logado() {
-      //   return localStorage.getItem('usuario-logado') !== null && this.$route.nome !== 'home';
+      //   return localStorage.getItem('usuariologado') !== null && this.$route.nome !== 'home';
       // },
       naoEstaLogado() {
-        return localStorage.getItem('usuario-logado') === null;
+        return localStorage.getItem('usuariologado') === null;
       },
   },
   onMounted() {

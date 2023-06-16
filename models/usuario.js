@@ -82,4 +82,4 @@ const UsuarioSchema = new mongoose.Schema({
   },
 });
 
-mongoose.model("usuario", UsuarioSchema);
+mongoose.model("Usuario", UsuarioSchema);

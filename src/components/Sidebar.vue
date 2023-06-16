@@ -12,8 +12,8 @@
       </router-link>
     </li>
     <li class="nav-item li-icons d-flex justify-content-center">
-      <router-link to="/account-home" title="Filtrar por bairro">
-        <i class="bi bi-search text-white fs-6"></i>
+      <router-link to="/account-denuncia" title="Denunciar">
+        <i class="bi bi-flag text-white fs-6"></i>
       </router-link>
     </li>
     <li class="nav-item li-icons d-flex justify-content-center">

@@ -27,9 +27,9 @@ const AnuncioSchema = new mongoose.Schema({
   },
   usuario: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "usuario",
+    ref: "Usuario",
     required: true,
   },
 });
 
-mongoose.model("anuncio", AnuncioSchema);
+mongoose.model("Anuncio", AnuncioSchema);

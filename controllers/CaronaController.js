@@ -1,6 +1,6 @@
 const mongoose = require('../database');
 
-const Carona = mongoose.model("carona");
+const Carona = mongoose.model("Carona");
 
 
 module.exports = {

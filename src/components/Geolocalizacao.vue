@@ -40,6 +40,7 @@
   <style>
   #map {
     height: 400px;
+    margin: 20px;
   }
   </style>
   

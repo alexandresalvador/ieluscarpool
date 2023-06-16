@@ -1,6 +1,6 @@
 const mongoose = require('../database');
 
-const Usuario = mongoose.model('usuario');
+const Usuario = mongoose.model('Usuario');
 
 
 module.exports = {
@@ -12,33 +12,33 @@ module.exports = {
     },
 
     async index(req, res) {
-        Usuario.find().maxTimeMS(30000); 
-        return res.json(user);
+        const usuario = await Usuario.find();
+        return res.json(usuario);
     },
 
     async show(req, res) {
-        const user = await Usuario.findById(req.params.id);
-        return res.json(user);
+        const usuario = await Usuario.findById(req.params.id);
+        return res.json(usuario);
     },
 
     async save(req, res) {
-        const user = await Usuario.create(req.body);
+        const usuario = await Usuario.create(req.body);
         console.log('O Usuário foi cadastrado!');
-        return res.json(user);
+        return res.json(usuario);
     },
 
     async update(req, res) {
-        const user = await Usuario.findByIdAndUpdate(req.params.id, req.body, {
+        const usuario = await Usuario.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
         });
         console.log('O Usuário foi atualizado!');
-        return res.json(user);
+        return res.json(usuario);
     },
 
     async destroy(req, res) {
-        const user = await Usuario.findByIdAndRemove(req.params.id);
-        console.log(`O Usuário ${user.nome} removido!`);
-        return res.json({ message: `Usuário ${user.nome} removido!` });
+        const usuario = await Usuario.findByIdAndRemove(req.params.id);
+        console.log(`O Usuário ${usuario.nome} removido!`);
+        return res.json({ message: `Usuário ${usuario.nome} removido!` });
     },
 
 

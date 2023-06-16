@@ -5,7 +5,7 @@
         <img src="../assets/carpool7.jpg" alt="" />
       </div>
       <div class="home-text col">
-        <form>
+        <form @submit.prevent="fazerLogin()">
           <div class="col d-flex justify-content-center ">
             <div class="col-10">
               <label for="email" class="form-label">
@@ -104,12 +104,14 @@
 </template>
 
 <script>
+// import api from "/api.js";
 import {
   required,
   minLength,
   maxLength,
   email,
 } from "vuelidate/lib/validators";
+
 export default {
   name: "LoginView",
   components: {},
@@ -137,26 +139,25 @@ export default {
     },
   },
   methods: {
-    signIn() {
+    fazerLogin() {
       const data = {
         email: this.email,
         password: this.password,
       };
-      api
-        .post("/login", data)
-        .then((response) => {
-          const { _id } = response.data;
-          if (data.password === response.data.password) {
-            const userLogged = {
+      api.post("/logar", data)
+         .then((response) => {
+           const { _id } = response.data;
+           if (data.password === response.data.password) {
+             const usuariologado = {
               id: _id,
               username: response.data.username,
             };
-            localStorage.removeItem("userLogged");
-            localStorage.setItem("userLogged", JSON.stringify(userLogged));
+            localStorage.removeItem("usuariologado");
+            localStorage.setItem("usuariologado", JSON.stringify(usuariologado));
             console.log("Usuário logado com sucesso!");
             this.$router.push({ path: `/perfil/${_id}` });
           } else {
-            alert("A senha está Incorreta!");
+            alert("Esta senha está Incorreta!");
           }
         })
         .catch((error) => {
@@ -164,11 +165,6 @@ export default {
         });
     },
     mostrarOcultarSenha: function() {
-      // if (this.isPassword) {
-      //   this.inputType = "text";
-      // } else {
-      //   this.inputType = "password";
-      // }
       let senha = document.getElementById("passwordI");
       if (senha.type == "password") {
         senha.type = "text";

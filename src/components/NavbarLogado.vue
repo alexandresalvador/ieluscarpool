@@ -4,9 +4,7 @@
       class="navbar d-flex justify-content-center align-items-center bg-light"
     >
       <div class="col-6 col-lg-2 logo d-flex justify-content-lg-center">
-        <a href="/account-home" class="logo"
-          ><img src="../assets/LogoIC01.png" alt=""
-        /></a>
+        <a href="" class="logo"><img src="../assets/LogoIC01.png" alt="" /></a>
       </div>
       <button
         class="navbar-toggler"
@@ -22,43 +20,27 @@
 
       <div class="bi bi-menu" id="menu-icon"></div>
       <ul class="nav-bar m-0">
-        <li><a href="/account-home" class="text-decoration-none">Home</a></li>
-        <li><a href="#" class="text-decoration-none">Novidades</a></li>
-        <li>
-          <a href="/account-denuncia" class="text-decoration-none">Denunciar</a>
-        </li>
-        <!-- <li v-if="mostrar" class="nav-item px-2 d-flex align-items-center">
-            <router-link to="/criar-conta" class="nav-link criar-conta">
-              <button type="button" class="btn btn-sm btn-outline-primary">Criar Conta</button>
-            </router-link>
-          </li>
-          <li v-if="mostrar" class="nav-item px-2 d-flex align-items-center">
-            <router-link to="/logar" class="nav-link login">
-              <button id="login" type="button" class="btn btn-sm btn-primary">Login</button>
-            </router-link>
-          </li>
-        <li v-else class="nav-item dropdown">
+        <ul
+          class="dropdown-menu dropdown-menu-dark border border-0 p-0 mt-lg-1"
+        >
+          <!-- <li>
             <router-link
-              to=""
-              :id="borda()"
-              class="nav-link dropdown-toggle hello"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-                Olá, {{nome()}}
+              :to="`/account-profile/${idNome()}`"
+              class="nav-link sair text-white"
+            >
+              Meu Perfil
             </router-link>
-            <ul class="dropdown-menu dropdown-menu-dark border border-0 p-0 mt-lg-1">
-              <li>
-                <router-link :to="`/account-profile/${idNome()}`" class="nav-link sair text-white">
-                  Meu Perfil
-                </router-link>
-              </li>
-              <li>
-                <router-link @click.native="sair()" to="/" class="nav-link sair text-white">
-                  Sair da conta
-                </router-link>
-              </li>
-            </ul>
           </li> -->
+          <!-- <li>
+            <router-link
+              @click.native="sair()"
+              to="/"
+              class="nav-link sair text-white"
+            >
+              Deslogar
+            </router-link>
+          </li> -->
+        </ul>
       </ul>
     </nav>
   </div>
@@ -81,32 +63,32 @@ export default {
   },
   methods: {
     borda() {
-      if (this.$route.name === 'perfil') {
-        return 'borda';
-      } return '';
+      if (this.$route.name === "perfil") {
+        return "borda";
+      }
+      return "";
     },
 
     nome() {
-      let valor = window.localStorage.getItem('usuario-logado');
+      let valor = window.localStorage.getItem("usuario-logado");
 
-        valor = JSON.parse(valor);
-        valor = valor.nome;
-        return valor;
+      valor = JSON.parse(valor);
+      valor = valor.nome;
+      return valor;
     },
 
     idNome() {
-      let valor = window.localStorage.getItem('usuario-logado');
+      let valor = window.localStorage.getItem("usuario-logado");
 
-        valor = JSON.parse( valor);
-        valor = valor.idNome;
-        return valor;
+      valor = JSON.parse(valor);
+      valor = valor.idNome;
+      return valor;
     },
 
     sair() {
+      localStorage.removeItem("usuario-logado");
 
-      localStorage.removeItem('usuario-logado');
-
-      this.mostrar = this.$emit('sair');
+      this.mostrar = this.$emit("sair");
     },
   },
 };

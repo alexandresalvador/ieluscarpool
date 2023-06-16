@@ -1,6 +1,6 @@
 const mongoose = require('../database');
 
-const Anuncio = mongoose.model('anuncio');
+const Anuncio = mongoose.model('Anuncio');
 
 
 module.exports = {
