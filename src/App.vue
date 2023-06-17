@@ -31,7 +31,8 @@ export default {
         } return false;
       }, 
       exibirSidebar() {
-        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' && this.$route.name !== 'HomeView'  && this.$route.name !== 'CreateProfile') {
+        if (this.$route.name !== 'CreateAccount' && this.$route.name !== 'LoginView' 
+          && this.$route.name !== 'HomeView'  && this.$route.name !== 'CreateProfile'   && this.$route.name !== 'AccountEditProfile') {
           return true;
         } return false;
       }, 
@@ -71,7 +72,7 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
+/* nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>

@@ -12,9 +12,9 @@
       </router-link>
     </li>
     <li class="nav-item li-icons d-flex justify-content-center">
-      <router-link to="/account-denuncia" title="Denunciar">
-        <i class="bi bi-flag text-white fs-6"></i>
-      </router-link>
+        <router-link to="/ver-anuncios" title="Anuncios">
+          <i class="bi bi-search text-white fs-6"></i>
+        </router-link>
     </li>
     <li class="nav-item li-icons d-flex justify-content-center">
       <router-link to="/account-history" title="Ver Meu Histórico">
@@ -26,6 +26,11 @@
         <i class="bi bi-heart text-white fs-5"></i>
       </router-link>
     </li>
+        <li class="nav-item li-icons d-flex justify-content-center">
+        <router-link to="/account-denuncia" title="Denunciar">
+          <i class="bi bi-flag text-white fs-6"></i>
+        </router-link>
+      </li>
     <ul id="sidebar" class="collapse p-0 position-absolute start-100">
       <li class="nav-item li-close d-flex justify-content-end">
         <button type="button" class="btn-close bg-white" data-bs-toggle="collapse" data-bs-target="#sidebar"

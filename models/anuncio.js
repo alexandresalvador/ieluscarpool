@@ -1,14 +1,14 @@
 const mongoose = require("../database/index");
 const AnuncioSchema = new mongoose.Schema({
 
-  // nome: {
-  //   type: String,
-  //   required: true,
-  // },
-  // descricao: {
-  //   type: String,
-  //   required: true,
-  // },
+  titulo: {
+    type: String,
+    required: true,
+  },
+  descricao: {
+    type: String,
+    required: true,
+  },
   // categoria: {
   //   type: String,
   //   required: true,

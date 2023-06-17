@@ -1,23 +1,17 @@
 <template>
   <div>
-    <nav class="navbar fixed-top d-flex justify-content-between px-5 align-items-center bg-light">
-      <a href="#" class="logo"><img src="../assets/LogoIC01.png" alt="" /></a>
-      <div class="bi bi-menu" id="menu-icon"></div>
-
-      <ul class="nav-bar m-0">
-        <li><a href="#" class="text-decoration-none">Home</a></li>
-        <li><a href="#como-funciona" class="text-decoration-none">Como Funciona</a></li>      
-        <li><a href="#sobre" class="text-decoration-none">Objetivo</a></li>
-        <li><a href="#a-faculdade" class="text-decoration-none">A Faculdade</a></li>
-        <li><a href="#o-contato" class="text-decoration-none">Contato</a></li>
-      </ul>
-    </nav>
-
     <nav class="navbar d-flex justify-content-center align-items-center bg-light">
-      <a href="#" class="logo"><img src="../assets/LogoIC01.png" alt="" /></a>
-      <div class="bi bi-menu" id="menu-icon"></div>
+      <div class="col-6 col-lg-2 logo d-flex justify-content-lg-center">
+        <a href="/" class="logo">
+          <img src="../assets/LogoIC01.png" />
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <ul class="nav-bar m-0">
+      <ul class="nav-bar m-0 collapse navbar-collapse" id="navbarNav">
         <li><a href="#" class="text-decoration-none">Home</a></li>
         <li><a href="#como-funciona" class="text-decoration-none">Como Funciona</a></li>
         <li><a href="#sobre" class="text-decoration-none">Objetivo</a></li>
@@ -39,11 +33,9 @@ export default {
 </script>
 
 <style scoped>
-
 .logo {
   display: flex;
   align-items: center;
-  flex: 1;
 }
 
 .logo img {
@@ -51,9 +43,11 @@ export default {
 }
 
 .nav-bar {
-  display: none;
-  flex-direction: column;
-  margin-top: 20px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 2px;
+  justify-content: center;
 }
 
 .nav-bar a {
@@ -68,50 +62,46 @@ export default {
   color: orange;
 }
 
-.nav-bar li {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.nav-bar li a {
-  display: block;
-}
-
 #menu-icon {
+  font-size: 24px;
   cursor: pointer;
   z-index: 1001;
   display: none;
-  font-size: 1.5rem;
 }
-
-/* arrumar toggle */
 
 @media (max-width: 768px) {
-  .navbar {
+  .navbar-toggler {
+    display: flex;
+    align-self: end;
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    background: #ffffff;
+    top: 100%;
+    right: 4rem;
+    margin: 0px;
+    height: auto;
+    z-index: 1000;
     flex-direction: column;
-    padding: 10px;
   }
 
-  #menu-icon {
-    display: block;
-    cursor: pointer;
+  .navbar-light .navbar-collapse .nav-link {
+    color: white;
   }
 
-  .nav-bar {
-    display: none;
-    flex-direction: column;
-    margin-top: 20px;
+  .nav-link:hover:not(.login) {
+    color: white !important;
   }
 
-  .nav-bar li {
-    text-align: center;
-    margin-bottom: 10px;
+  .nav-item {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
   }
-
-  .nav-bar li a {
-    display: block;
-  }
-
 }
-
 </style>

@@ -4,7 +4,8 @@
       <div class="partials row col d-flex justify-content-center py-20 p-5">
         <div class="partials-text col-9">
           <div class="about">
-            <h3>O que você quer denunciar?</h3>
+            <h1>Denunciar</h1>
+            <h5>O que você quer denunciar?</h5>
             <br />
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label d-flex justify-content-left "

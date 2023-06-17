@@ -19,7 +19,7 @@
             <a href="/account-motorista" class="btn text-white">Oferecer Carona</a>
           </button>
           <button class="btn btn-primary btn-lg" type="button" id="botao-buscar">
-            <a href="/account-caroneiro" class="btn text-white">Buscar Carona</a>
+            <a href="/account-caroneiro" class="btn text-white">Pedir Carona</a>
           </button>
         </div>
       </div>

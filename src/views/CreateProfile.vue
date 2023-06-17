@@ -16,13 +16,8 @@
               <div class="row mb-3" id="foto-perfil">
                 <div class="col">
                   <div class="d-flex justify-content-center align-items-center">
-                    <img
-                      src="../assets/foto-perfil.png"
-                      alt=""
-                      width="80"
-                      height="80"
-                      class="d-inline-block align-text-top"
-                    />
+                    <img src="../assets/foto-perfil.png" alt="" width="80" height="80"
+                      class="d-inline-block align-text-top" />
                   </div>
                 </div>
                 <button class="btn btn-light" id="button-foto">
@@ -36,20 +31,12 @@
             <div class="row">
               <div class="col">
                 <div class="row mb-3">
-                  <label for="nome"
-                    ><span class="d-flex justify-content-between">
+                  <label for="nome"><span class="d-flex justify-content-between">
                       <b>Nome Completo: </b>
                       <small v-if="alerta01()" class="text-danger">
-                        Obrigatório!</small
-                      >
+                        Obrigatório!</small>
                     </span>
-                    <input
-                      v-model="perfil.nome"
-                      type="text"
-                      class="form-control"
-                      placeholder="Nome Completo"
-                      required
-                    />
+                    <input v-model="perfil.nome" type="text" class="form-control" placeholder="Nome Completo" required />
                   </label>
                 </div>
               </div>
@@ -57,20 +44,12 @@
             <div class="row">
               <div class="col">
                 <div class="row mb-3">
-                  <label for="curso"
-                    ><span class="d-flex justify-content-between">
+                  <label for="curso"><span class="d-flex justify-content-between">
                       <b>Curso: </b>
                       <small v-if="alerta02()" class="text-danger">
-                        Obrigatório!</small
-                      >
+                        Obrigatório!</small>
                     </span>
-                    <input
-                      v-model="perfil.curso"
-                      type="text"
-                      class="form-control"
-                      placeholder="Curso"
-                      required
-                    />
+                    <input v-model="perfil.curso" type="text" class="form-control" placeholder="Curso" required />
                   </label>
                 </div>
               </div>
@@ -79,78 +58,48 @@
           <div class="row mb-3">
             <div class="col">
               <div class="row mb-3">
-                <label for="data_inicio"
-                  ><span class="d-flex justify-content-between">
+                <label for="data_inicio"><span class="d-flex justify-content-between">
                     <b>Data de inicio: </b>
                     <small v-if="alerta03()" class="text-danger">
-                      Obrigatório!</small
-                    >
+                      Obrigatório!</small>
                   </span>
-                  <input
-                    v-model="perfil.data_inicio"
-                    type="date"
-                    class="form-control"
-                    placeholder=""
-                    required
-                  />
+                  <input v-model="perfil.data_inicio" type="date" class="form-control" placeholder="" required />
                 </label>
               </div>
             </div>
             <div class="col">
               <div class="row mb-3">
-                <label for="data_termino"
-                  ><span class="d-flex justify-content-between">
+                <label for="data_termino"><span class="d-flex justify-content-between">
                     <b>Data de término: </b>
                     <small v-if="alerta04()" class="text-danger">
-                      Obrigatório!</small
-                    >
+                      Obrigatório!</small>
                   </span>
-                  <input
-                    v-model="perfil.data_termino"
-                    type="date"
-                    class="form-control"
-                    placeholder=""
-                    required
-                  />
+                  <input v-model="perfil.data_termino" type="date" class="form-control" placeholder="" required />
                 </label>
               </div>
             </div>
             <div class="col">
               <div class="row mb-3">
-                <label for="data_nasc"
-                  ><span class="d-flex justify-content-between">
+                <label for="data_nasc"><span class="d-flex justify-content-between">
                     <b>Data de Nascimento: </b>
                     <small v-if="alerta05()" class="text-danger">
-                      Obrigatório!</small
-                    >
+                      Obrigatório!</small>
                   </span>
-                  <input
-                    v-model="perfil.data_nasc"
-                    type="date"
-                    class="form-control"
-                    placeholder="Data de Nascimento"
-                    required
-                  />
+                  <input v-model="perfil.data_nasc" type="date" class="form-control" placeholder="Data de Nascimento"
+                    required />
                 </label>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="row mb-3">
-                  <label for="telefone"
-                    ><span class="d-flex justify-content-between">
+                  <label for="telefone"><span class="d-flex justify-content-between">
                       <b>Tel. Fixo/Celular</b>
                       <small v-if="alerta06()" class="text-danger">
-                        Obrigatório!</small
-                      >
+                        Obrigatório!</small>
                     </span>
-                    <input
-                      v-model="perfil.telefone"
-                      type="text"
-                      class="form-control"
-                      placeholder="47 99999-9999"
-                      required
-                    />
+                    <input v-model="perfil.telefone" type="text" class="form-control" placeholder="47 99999-9999"
+                      required />
                   </label>
                 </div>
               </div>
@@ -165,129 +114,79 @@
           <br />
           <div class="col">
             <div class="row mb-3">
-              <label for="rua"
-                ><span class="d-flex justify-content-between">
+              <label for="rua"><span class="d-flex justify-content-between">
                   <b>Rua: </b>
                   <small v-if="alerta07()" class="text-danger">
-                    Obrigatório!</small
-                  >
+                    Obrigatório!</small>
                 </span>
-                <input
-                  @input="desabilitar"
-                  v-model="perfil.rua"
-                  type="text"
-                  class="form-control"
-                  placeholder="Rua"
-                  required
-                />
+                <input @input="desabilitar" v-model="perfil.rua" type="text" class="form-control" placeholder="Rua"
+                  required />
               </label>
             </div>
           </div>
           <div class="row mb-4">
             <div class="col">
               <div class="row mb-3">
-                <label for="numero"
-                  ><span class="d-flex justify-content-between">
+                <label for="numero"><span class="d-flex justify-content-between">
                     <b>Número: </b>
                   </span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Número"
-                  />
+                  <input type="text" class="form-control" placeholder="Número" />
                 </label>
               </div>
             </div>
             <div class="col">
               <div class="row mb-3">
-                <label for="complemento"
-                  ><span class="d-flex justify-content-between">
+                <label for="complemento"><span class="d-flex justify-content-between">
                     <b>Complemento: </b>
                   </span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Complemento"
-                  />
+                  <input type="text" class="form-control" placeholder="Complemento" />
                 </label>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="row mb-3">
-              <label for="email"
-                ><span class="d-flex justify-content-between">
+              <label for="email"><span class="d-flex justify-content-between">
                   <b>CEP: </b>
                   <small v-if="alerta11()" class="text-danger">
-                    Obrigatório!</small
-                  >
+                    Obrigatório!</small>
                 </span>
-                <input
-                  v-model="perfil.cep"
-                  type="text"
-                  class="form-control"
-                  placeholder="CEP"
-                  required
-                />
+                <input v-model="perfil.cep" type="text" class="form-control" placeholder="CEP" required />
               </label>
             </div>
           </div>
           <div class="row mb-4"></div>
           <div class="col">
             <div class="row mb-3">
-              <label for="bairro"
-                ><span class="d-flex justify-content-between">
+              <label for="bairro"><span class="d-flex justify-content-between">
                   <b>Bairro: </b>
                   <small v-if="alerta08()" class="text-danger">
-                    Obrigatório!</small
-                  >
+                    Obrigatório!</small>
                 </span>
-                <input
-                  v-model="perfil.bairro"
-                  type="text"
-                  class="form-control"
-                  placeholder="Bairro"
-                  required
-                />
+                <input v-model="perfil.bairro" type="text" class="form-control" placeholder="Bairro" required />
               </label>
             </div>
           </div>
           <div class="col">
             <div class="row mb-3">
-              <label for="estado"
-                ><span class="d-flex justify-content-between">
+              <label for="estado"><span class="d-flex justify-content-between">
                   <b>Estado: </b>
                   <small v-if="alerta10()" class="text-danger">
-                    Obrigatório!</small
-                  >
+                    Obrigatório!</small>
                 </span>
-                <input
-                  v-model="perfil.estado"
-                  type="text"
-                  class="form-control"
-                  placeholder="Estado"
-                  required
-                />
+                <input v-model="perfil.estado" type="text" class="form-control" placeholder="Estado" required />
               </label>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="row mb-3">
-            <label for="cidade"
-              ><span class="d-flex justify-content-between">
+            <label for="cidade"><span class="d-flex justify-content-between">
                 <b>Cidade: </b>
                 <small v-if="alerta09()" class="text-danger">
-                  Obrigatório!</small
-                >
+                  Obrigatório!</small>
               </span>
-              <input
-                v-model="perfil.cidade"
-                type="text"
-                class="form-control"
-                placeholder="Cidade"
-                required
-              />
+              <input v-model="perfil.cidade" type="text" class="form-control" placeholder="Cidade" required />
             </label>
           </div>
         </div>
@@ -297,33 +196,18 @@
     <div class="row mb-4">
       <div class="col">
         <button id="cancelar" type="button" class="btn btn-secondary">
-          <router-link
-            class="text-light text-decoration-none"
-            to="/criar-conta"
-          >
+          <router-link class="text-light text-decoration-none" to="/criar-conta">
             Cancelar
           </router-link>
         </button>
       </div>
       <div class="col">
-        <button
-          v-if="desabilitar()"
-          type="button"
-          disabled
-          class="btn btn-light border border-primary"
-        >
-          <router-link class="text-primary text-decoration-none" to="/"
-            >Salvar
+        <button v-if="desabilitar()" type="button" disabled class="btn btn-light border border-primary">
+          <router-link class="text-primary text-decoration-none" to="/">Salvar
           </router-link>
         </button>
-        <button
-          v-else
-          @click="cadastrar()"
-          type="button"
-          class="btn btn-primary border border-secondary text-light"
-        >
-        <router-link class="text-white text-decoration-none" to="/account-home"
-            >Salvar
+        <button v-else @click="cadastrar()" type="button" class="btn btn-primary border border-secondary text-light">
+          <router-link class="text-white text-decoration-none" to="/account-home">Salvar
           </router-link>
         </button>
       </div>

@@ -2,7 +2,7 @@
   <div class="container-fluid px-0">
     <Navbar />
     <div class="home row align-items-center p-5" id="home">
-      <div class="home-text col">    
+      <div class="home-text col">
         <span class="d-flex justify-content-left fs-4">Bem Vindo ao</span>
         <h1 class="d-flex justify-content-left">Ielusc Carpool!</h1>
         <p class="fs-3">
@@ -32,16 +32,27 @@
     </div>
     <br />
 
-    <WhatsView  id="como-funciona" />
+    <WhatsView id="como-funciona" />
     <br />
 
-    <AboutView  id="sobre" />
+    <AboutView id="sobre" />
     <br />
 
-    <PartnersView  id="a-faculdade" />
+    <PartnersView id="a-faculdade" />
     <br />
 
-    <ContactView  id="o-contato" />
+    <ContactView id="o-contato" />
+
+    <div class="container-fluid px-0">
+      <div class="partials row align-items-center p-5">
+        <ul>
+          <a href="#" class="text-decoration-none">
+              <i class="bi bi-arrow-up-circle"></i>
+            </a>
+            <h1> Subir pro topo</h1>
+        </ul>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -95,6 +106,10 @@ h1 {
   color: #13407c;
 }
 
+.bi-arrow-up-circle {
+  font-size: 30px;
+}
+
 p {
   text-align: left;
   font-weight: 600;
@@ -117,6 +132,7 @@ p {
   color: #fff;
   background: #13407c;
 }
+
 .home-text {
   text-align: center;
 }
@@ -154,5 +170,4 @@ p {
     margin-top: 40px;
   }
 }
-
 </style>

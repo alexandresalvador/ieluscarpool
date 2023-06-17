@@ -1,53 +1,36 @@
 <template>
   <div>
-    <nav
-      class="navbar d-flex justify-content-center align-items-center bg-light"
-    >
+    <nav class="navbar d-flex justify-content-center align-items-center bg-light">
       <div class="col-6 col-lg-2 logo d-flex justify-content-lg-center">
-        <a href="" class="logo"><img src="../assets/LogoIC01.png" alt="" /></a>
+        <a href="/account-home" class="logo">
+          <img src="../assets/LogoIC01.png"/>
+        </a>
       </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="bi bi-menu" id="menu-icon"></div>
-      <ul class="nav-bar m-0">
-        <ul
-          class="dropdown-menu dropdown-menu-dark border border-0 p-0 mt-lg-1"
-        >
-          <!-- <li>
-            <router-link
-              :to="`/account-profile/${idNome()}`"
-              class="nav-link sair text-white"
-            >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link :to="`/account-profile/${idNome}`" class="nav-link">
               Meu Perfil
             </router-link>
-          </li> -->
-          <!-- <li>
-            <router-link
-              @click.native="sair()"
-              to="/"
-              class="nav-link sair text-white"
-            >
+          </li>
+          <li class="nav-item">
+            <router-link @click.native="sair" to="/" class="nav-link">
               Deslogar
             </router-link>
-          </li> -->
+          </li>
         </ul>
-      </ul>
+      </div>
     </nav>
   </div>
 </template>
-  
-  <script>
-//   import Navbar from "@/components/Navbar.vue";
+
+<script>
 export default {
   name: "NavbarLogado",
   props: {
@@ -56,57 +39,35 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      mostrar: this.naoEstaLogado,
-    };
+  computed: {
+    idNome() {
+      const valor = JSON.parse(localStorage.getItem("usuariologado"));
+      return valor ? valor.idNome : "";
+    },
   },
   methods: {
-    borda() {
-      if (this.$route.name === "perfil") {
-        return "borda";
-      }
-      return "";
-    },
-
-    nome() {
-      let valor = window.localStorage.getItem("usuario-logado");
-
-      valor = JSON.parse(valor);
-      valor = valor.nome;
-      return valor;
-    },
-
-    idNome() {
-      let valor = window.localStorage.getItem("usuario-logado");
-
-      valor = JSON.parse(valor);
-      valor = valor.idNome;
-      return valor;
-    },
-
     sair() {
-      localStorage.removeItem("usuario-logado");
-
-      this.mostrar = this.$emit("sair");
+      localStorage.removeItem("usuariologado");
+      this.$emit("sair");
     },
   },
 };
 </script>
+
   
   <style scoped>
-.logo {
-  display: flex;
-  align-items: center;
-}
+  .logo {
+    display: flex;
+    align-items: center;
+  }
 
-.logo img {
-  width: 150px;
-}
+  .logo img {
+    width: 150px;
+  }
 
-.nav-bar {
-  display: flex;
-  list-style: none;
+  .nav-bar {
+    display: flex;
+    list-style: none;
 }
 
 .nav-bar a {
@@ -139,7 +100,7 @@ export default {
   }
   .navbar-nav {
     position: absolute;
-    background: rgba(40, 40, 40, 0.9);
+    background: #F28A16;
     top: 100%;
     right: 4rem;
     margin: 0px;
@@ -152,20 +113,16 @@ export default {
   .nav-link:hover:not(.login) {
     color: white !important;
   }
-  .btn-outline-primary {
-    color: white;
-    border-color: white;
-  }
   .nav-item {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
   }
-  .router-link-active:not(.link-logo) {
+  /* .router-link-active:not(.link-logo) {
     color: white !important;
   }
   .dropdown-menu {
-    background: #3b3b3b !important;
+    background: #f5ecec !important;
     border: none;
-  }
+  } */
 }
 </style>

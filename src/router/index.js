@@ -16,6 +16,7 @@ import AccountEditProfile from '../views/AccountEditProfile.vue'
 import AccountFavourites from '../views/AccountFavourites.vue'
 import AccountHistory from '../views/AccountHistory.vue'
 import Denuncia from '../views/Denuncia.vue'
+import SearchCarpool from '../views/SearchCarpool'
 // import AccountChat from '../views/AccountChat.vue'
 
 Vue.use(VueRouter)
@@ -63,37 +64,37 @@ const routes = [
   },
   {
     path: '/account-home',
-    name: 'Home logado',
+    name: 'AccountHome',
     component: AccountHome
   },
   {
     path: '/account-motorista',
-    name: 'Oferecer Caronas logado',
+    name: 'AccountOferecerCarona',
     component: AccountOferecerCarona
   },
   {
     path: '/account-caroneiro',
-    name: 'Pedir Caronas logado',
+    name: 'AccountPedirCarona',
     component: AccountPedirCarona
   },
   {
     path: '/account-profile',
-    name: 'Perfil logado',
+    name: 'AccountProfile',
     component: AccountProfile
   },
   {
     path: '/account-editar-perfil',
-    name: 'Editar Perfil logado',
+    name: 'AccountEditProfile',
     component: AccountEditProfile
   },
   {
     path: '/account-favourites',
-    name: 'Favoritos logado',
+    name: 'AccountFavourites',
     component: AccountFavourites
   },
   {
     path: '/account-history',
-    name: 'Historico logado',
+    name: 'AccountHistory',
     component: AccountHistory
   },
   {
@@ -101,9 +102,14 @@ const routes = [
     name: 'Denuncia',
     component: Denuncia
   },  
+  {
+    path: '/ver-anuncios',
+    name: 'SearchCarpool',
+    component: SearchCarpool
+  }, 
   // {
   //   path: '/account-chat',
-  //   name: 'Chat logado',
+  //   name: 'AccountChat',
   //   component: AccountChat
   // },
   // {

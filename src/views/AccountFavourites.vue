@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <NavbarLog /> -->
-    
     <div class="con">
       <h4>CARONAS FAVORITADAS</h4>
       <br />
@@ -37,5 +35,21 @@ export default {
   width: 100%;
   background-color: rgb(200, 247, 247);
 }
+
+  @media (max-width: 768px) {
+
+    .con2 {
+      height: 150px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      padding-right: 20px;
+    }
+
+      .con2 h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
 </style>
     
