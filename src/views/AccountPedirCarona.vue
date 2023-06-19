@@ -4,7 +4,6 @@
       <h4>Peça uma carona a outro usuario criando uma solicitação:</h4>
       <br>
       <hr>
-      <br>
 
       <div class="container bg-light mt-4 py-1">
         <form @submit.prevent="salvarPedido()">
@@ -31,7 +30,7 @@
 
           <div class="row pt-2 justify-content-center">
             <label for="categoria" class="col-11 form-label">
-              <span class="fs-6">Hora desejada :</span>
+              <span class="fs-6">Horário de embarque :</span>
               <select class="form-select form-select-sm" required aria-label="categoria" v-model="$v.categoria.$model"
                 :class="{ error: $v.categoria.$error, success: !$v.categoria.$error }">
                 <option value="">Selecione</option>
@@ -59,17 +58,17 @@
                 <select class="form-select form-select-sm" required aria-label="categoria" v-model="$v.categoria.$model"
                   :class="{ error: $v.categoria.$error, success: !$v.categoria.$error }">
                   <option value="">Selecione</option>
-                  <option value="18:00">18:00</option>
-                  <option value="18:30">18:30</option>
-                  <option value="19:00">19:00</option>
-                  <option value="19:30">19:30</option>
-                  <option value="20:00">20:00</option>
-                  <option value="20:30">20:30</option>
-                  <option value="21:00">21:00</option>
-                  <option value="21:30">21:30</option>
-                  <option value="22:00">22:00</option>
-                  <option value="22:30">22:30</option>
-                  <option value="Outro horário">Outro horário (Personalizado)</option>
+                  <option value="Bucarein">Bucarein</option>
+                  <option value="Aventureiro">Aventureiro</option>
+                  <option value="Costa e Silva">Costa e Silva</option>
+                  <option value="Anita Garibaldi">Anita Garibaldi</option>
+                  <option value="Espinheiros">Espinheiros</option>
+                  <option value="Cubatão">Cubatão</option>
+                  <option value="Jardim Paraíso">Jardim Paraíso</option>
+                  <option value="Nova Brasilia">Nova Brasilia</option>
+                  <option value="Atiradores">Atiradores</option>
+                  <option value="Morro do Meio">Morro do Meio</option>
+                  <option value="Outro">Outro(Personalizado)</option>
                 </select>
                 <div v-if="$v.categoria.$error" class="text-danger">
                   <small>Categoria requerida</small>
@@ -93,7 +92,7 @@
 </template>
     
 <script>
-// import api from '@/api';
+import api from "@/api";
 import {
   required,
   minLength,
